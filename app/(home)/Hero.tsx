@@ -28,17 +28,18 @@ const heroPhotos = [
 export default function Hero() {
 	return (
 		<div className="relative min-h-screen flex items-center overflow-hidden">
-			{/* Cinematic photo backdrop */}
+			{/* Cinematic photo backdrop — Samuel Beckett Bridge at dusk
+			    (Giuseppe Milo, CC BY 2.0, colour-graded; credit in footer) */}
 			<div aria-hidden className="absolute inset-0">
 				<Image
-					src="/dublin/photos/datathon2.jpeg"
+					src="/dublin/photos/beckett-bridge.jpg"
 					alt=""
 					fill
 					priority
 					sizes="100vw"
-					className="object-cover object-center opacity-60"
+					className="object-cover object-center opacity-75"
 				/>
-				<div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black" />
+				<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black" />
 				<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/30" />
 			</div>
 
