@@ -37,7 +37,7 @@ export default function Partners() {
 	return (
 		<section
 			id="partners"
-			className="relative bg-black/60 py-24 sm:py-32 overflow-hidden"
+			className="scroll-mt-16 relative bg-black/60 py-24 sm:py-32 overflow-hidden"
 		>
 			<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60vh] w-[60vh] bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.06)_0%,_transparent_60%)] pointer-events-none" />
 

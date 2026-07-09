@@ -10,7 +10,7 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="relative bg-black/60 py-28 sm:py-36 overflow-hidden"
+			className="scroll-mt-16 relative bg-black/60 py-28 sm:py-36 overflow-hidden"
 		>
 			{/* Celtic knot-inspired subtle pattern */}
 			<div

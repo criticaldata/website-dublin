@@ -1,5 +1,5 @@
-import { Mail, BellRing } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { BellRing } from 'lucide-react';
+import CopyEmailButton from '@/components/elements/CopyEmailButton';
 
 const CONTACT_EMAIL = 'dublink.llmathon@gmail.com';
 
@@ -7,7 +7,7 @@ export default function RegisterCTA() {
 	return (
 		<section
 			id="register"
-			className="relative bg-black/60 py-32 sm:py-40 overflow-hidden"
+			className="scroll-mt-16 relative bg-black/60 py-32 sm:py-40 overflow-hidden"
 		>
 			{/* Grain overlay */}
 			<div
@@ -50,33 +50,15 @@ export default function RegisterCTA() {
 					Places will be limited — don&rsquo;t miss out
 				</div>
 
-				{/* Primary CTA */}
-				<div>
-					<a
-						href={`mailto:${CONTACT_EMAIL}?subject=DubLINK%20LLM-athon%20%E2%80%94%20Registration%20Interest`}
-						className="inline-block"
-					>
-						<Button className="relative h-16 rounded-full px-12 text-lg font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/40 transition-all duration-300 hover:shadow-teal-900/40 hover:-translate-y-0.5 group overflow-hidden">
-							<span className="relative flex items-center">
-								Register Your Interest
-								<Mail className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-							</span>
-						</Button>
-					</a>
-				</div>
+				{/* Primary CTA — opens mail app, with copy-to-clipboard fallback */}
+				<CopyEmailButton email={CONTACT_EMAIL} />
 
 				{/* Contact */}
 				<div className="mt-12 text-sm text-white/40 leading-relaxed">
 					<p>
 						General enquiries — registration, programme, speakers or
-						sponsorship:
+						sponsorship — to the address above.
 					</p>
-					<a
-						href={`mailto:${CONTACT_EMAIL}`}
-						className="mt-1 inline-block font-medium text-teal-300/90 hover:text-teal-200 transition-colors"
-					>
-						{CONTACT_EMAIL}
-					</a>
 				</div>
 			</div>
 		</section>

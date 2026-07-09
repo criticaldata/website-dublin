@@ -42,7 +42,7 @@ const themes = [
 
 export default function Workshop() {
 	return (
-		<section className="relative bg-black/60 py-24 sm:py-32 overflow-hidden">
+		<section className="scroll-mt-16 relative bg-black/60 py-24 sm:py-32 overflow-hidden">
 			<div className="absolute left-0 top-1/2 -translate-y-1/2 h-[50vh] w-[50vh] bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.05)_0%,_transparent_60%)] pointer-events-none" />
 
 			<div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

@@ -30,7 +30,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={geistSans.className} suppressHydrationWarning>
+		<html
+			lang="en"
+			className={`${geistSans.className} scroll-smooth`}
+			suppressHydrationWarning
+		>
 			<body className="bg-background text-foreground dark">
 				<Suspense fallback={<Spinner className="h-[calc(100vh-20rem)]" />}>
 					<NuqsAdapter>

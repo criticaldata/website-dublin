@@ -45,7 +45,7 @@ export default function Programme() {
 	return (
 		<section
 			id="programme"
-			className="relative bg-black/60 py-24 sm:py-32 overflow-hidden"
+			className="scroll-mt-16 relative bg-black/60 py-24 sm:py-32 overflow-hidden"
 		>
 			{/* Soft glow */}
 			<div className="absolute right-0 top-1/3 h-[50vh] w-[50vh] bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.05)_0%,_transparent_60%)] pointer-events-none" />

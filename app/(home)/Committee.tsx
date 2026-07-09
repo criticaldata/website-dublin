@@ -49,7 +49,7 @@ export default function Committee() {
 	return (
 		<section
 			id="team"
-			className="relative bg-black/60 py-24 sm:py-32 overflow-hidden"
+			className="scroll-mt-16 relative bg-black/60 py-24 sm:py-32 overflow-hidden"
 		>
 			<div className="absolute left-0 bottom-0 h-[40vh] w-[40vh] bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.05)_0%,_transparent_60%)] pointer-events-none" />
 
