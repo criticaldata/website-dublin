@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Expand, ChevronLeft, ChevronRight } from 'lucide-react';
+import imageLoader from '@/lib/image-loader';
 
 export interface GalleryPhoto {
 	src: string;
@@ -83,9 +84,11 @@ export default function PhotoGallery({
 						<>
 							<DialogTitle className="sr-only">{active.alt}</DialogTitle>
 							<div className="relative w-full max-h-[80vh] overflow-hidden rounded-xl">
+								{/* Plain <img> bypasses next/image, so the GitHub Pages base
+								    path must be applied by hand or the file 404s in production */}
 								{/* eslint-disable-next-line @next/next/no-img-element */}
 								<img
-									src={active.src}
+									src={imageLoader({ src: active.src })}
 									alt={active.alt}
 									className="w-full h-auto max-h-[80vh] object-contain"
 								/>
