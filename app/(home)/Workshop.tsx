@@ -5,6 +5,7 @@ import {
 	Brain,
 	ShieldCheck,
 	Users,
+	Laptop,
 } from 'lucide-react';
 
 const themes = [
@@ -65,10 +66,16 @@ export default function Workshop() {
 					Participants work in multidisciplinary groups using leading LLMs to
 					tackle realistic clinical and non-clinical healthcare scenarios.
 				</p>
-				<p className="text-base sm:text-lg text-white/55 max-w-3xl mb-14 leading-relaxed">
+				<p className="text-base sm:text-lg text-white/55 max-w-3xl mb-8 leading-relaxed">
 					The focus: prompt engineering, clinical reasoning, AI evaluation,
 					cognitive bias, governance, ethics and safe implementation.
 				</p>
+
+				<div className="mb-14 inline-flex items-center gap-2.5 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2.5 text-sm text-teal-200/90">
+					<Laptop className="h-4 w-4 shrink-0" />
+					Participants are recommended to bring their own laptops for the
+					hands-on activities.
+				</div>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
 					{themes.map((theme) => (

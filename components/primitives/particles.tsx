@@ -6,11 +6,15 @@ import { loadSlim } from 'tsparticles-slim';
 
 export default function RenderParticles({
 	fullScreen = true,
+	id = 'tsparticles',
 }: {
 	/** Set false to contain the canvas within its own positioned parent
 	 *  instead of covering the whole viewport (used inside Hero, whose
 	 *  photo backdrop otherwise fully occludes the page-wide layer). */
 	fullScreen?: boolean;
+	/** Must be unique per instance — tsparticles registers containers by
+	 *  id, and two instances sharing one id kill each other's animation. */
+	id?: string;
 }) {
 	const particlesInit = useCallback(async (engine: Engine) => {
 		// you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
@@ -29,7 +33,7 @@ export default function RenderParticles({
 
 	return (
 		<Particles
-			id="tsparticles"
+			id={id}
 			init={particlesInit}
 			loaded={particlesLoaded}
 			options={{

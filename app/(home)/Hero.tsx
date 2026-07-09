@@ -34,19 +34,21 @@ export default function Hero() {
 			{/* Cinematic photo backdrop — Samuel Beckett Bridge at dusk
 			    (Giuseppe Milo, CC BY 2.0, colour-graded; credit in footer) */}
 			<div aria-hidden className="absolute inset-0">
+				{/* Phones: zoomed out (object-contain, anchored top) so the whole
+				    bridge reads instead of a heavy portrait centre-crop; desktop
+				    keeps the full-bleed cover */}
 				<Image
 					src="/dublin/photos/beckett-bridge.jpg"
 					alt=""
 					fill
 					priority
 					sizes="100vw"
-					className="object-cover object-center opacity-75"
+					className="object-contain object-top opacity-90 lg:object-cover lg:object-center lg:opacity-75"
 				/>
-				<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black" />
-				{/* Solid scrim behind the text column only — keeps semi-transparent
-				    copy legible over the photo's uneven brightness (cable lines,
-				    bright sky) regardless of how bright the backdrop itself is */}
-				<div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent" />
+				<div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black lg:from-black/50" />
+				{/* Solid scrim behind the text column, desktop only — on phones a
+				    light flat overlay keeps the city visible under the text */}
+				<div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/75 lg:to-transparent" />
 			</div>
 
 			{/* Grain overlay — atmospheric texture */}
@@ -70,11 +72,12 @@ export default function Hero() {
 			    gets its own contained layer, floating over the photo,
 			    under the text */}
 			<div aria-hidden className="absolute inset-0 z-[3] pointer-events-none">
-				<RenderParticles fullScreen={false} />
+				<RenderParticles fullScreen={false} id="tsparticles-hero" />
 			</div>
 
-			{/* Content */}
-			<div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+			{/* Content — on phones/tablets, start below the contained photo band
+			    (~66vw tall) so the city stays fully visible above the text */}
+			<div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[64vw] pb-24 lg:py-32">
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 					<div className="lg:col-span-8">
 						{/* Kicker — editorial */}
