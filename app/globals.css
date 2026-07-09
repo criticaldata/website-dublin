@@ -72,18 +72,12 @@ html {
 	scroll-behavior: smooth;
 }
 
-/* Respect reduced-motion: shorten entrance animations rather than removing
-   them outright — a lot of Linux desktops report this preference by default,
-   and animation-duration: 0.01ms made every fade/slide effect invisible */
+/* A lot of Linux desktops report prefers-reduced-motion by default even
+   when nobody deliberately chose it. Leave the site's animations (small,
+   short entrance fades, not looping/parallax effects) untouched here so
+   they stay visible; only drop the smooth-scroll jump for those users. */
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
-	}
-	*,
-	*::before,
-	*::after {
-		animation-duration: 300ms !important;
-		animation-delay: 0ms !important;
-		transition-duration: 200ms !important;
 	}
 }
