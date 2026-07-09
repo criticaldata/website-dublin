@@ -42,7 +42,10 @@ export default function Hero() {
 					className="object-cover object-center opacity-75"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/15 to-black" />
-				<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/30" />
+				{/* Solid scrim behind the text column only — keeps semi-transparent
+				    copy legible over the photo's uneven brightness (cable lines,
+				    bright sky) regardless of how bright the backdrop itself is */}
+				<div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent" />
 			</div>
 
 			{/* Grain overlay — atmospheric texture */}
@@ -95,9 +98,9 @@ export default function Hero() {
 								One day. Every discipline. Hands on with large language models
 								in healthcare.
 							</p>
-							<p className="mt-5 text-base sm:text-lg text-white/65 italic leading-relaxed max-w-xl">
+							<p className="mt-5 text-base sm:text-lg text-white/80 italic leading-relaxed max-w-xl">
 								Clinicians, researchers, students, engineers and patient
-								advocates — working side by side in the heart of Dublin.
+								advocates, working side by side in the heart of Dublin.
 							</p>
 						</div>
 
@@ -108,12 +111,12 @@ export default function Hero() {
 						>
 							<div className="flex items-center gap-3">
 								<span className="inline-flex h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
-								<span className="text-sm text-white/70 font-medium tracking-wide">
+								<span className="text-sm text-white/85 font-medium tracking-wide">
 									Saturday, 19 September 2026
 								</span>
 							</div>
 							<span className="hidden sm:inline h-4 w-px bg-white/20" />
-							<span className="text-sm text-white/70 font-medium tracking-wide">
+							<span className="text-sm text-white/85 font-medium tracking-wide">
 								Tallaght University Hospital, Dublin, Ireland
 							</span>
 						</div>
@@ -144,9 +147,10 @@ export default function Hero() {
 						</div>
 					</div>
 
-					{/* Event logo — floats free on the dark backdrop */}
+					{/* Event logo — sits high in the frame, clear of the photo's
+					    bridge/building band lower down */}
 					<div
-						className="hidden lg:flex lg:col-span-4 justify-center animate-in fade-in-0 zoom-in-95 duration-1000"
+						className="hidden lg:flex lg:col-span-4 lg:self-start justify-center pt-4 animate-in fade-in-0 zoom-in-95 duration-1000"
 						style={{ animationDelay: '400ms', animationFillMode: 'both' }}
 					>
 						<div className="relative">
@@ -156,11 +160,11 @@ export default function Hero() {
 							/>
 							<Image
 								src="/dublin/dublink-logo-dark.png"
-								alt="DubLINK LLM-athon — AI in Healthcare"
+								alt="DubLINK LLM-athon, AI in Healthcare"
 								width={400}
 								height={358}
 								priority
-								className="relative h-auto w-full max-w-[400px] drop-shadow-[0_0_35px_rgba(20,184,166,0.2)]"
+								className="relative h-auto w-full max-w-[340px] drop-shadow-[0_0_35px_rgba(20,184,166,0.2)]"
 							/>
 						</div>
 					</div>

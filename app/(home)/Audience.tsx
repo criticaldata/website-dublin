@@ -2,7 +2,7 @@ const audiences = [
 	{
 		label: 'Doctors & nurses',
 		detail:
-			'Clinicians of every grade and specialty who want to understand what LLMs can — and cannot — safely do in day-to-day patient care.',
+			'Clinicians of every grade and specialty who want to understand what LLMs can and cannot safely do in day-to-day patient care.',
 	},
 	{
 		label: 'Allied health professionals',
@@ -12,7 +12,7 @@ const audiences = [
 	{
 		label: 'Medical & healthcare students',
 		detail:
-			'Students of medicine, nursing and health sciences building the AI literacy their future careers will demand — no experience needed.',
+			'Students of medicine, nursing and health sciences building the AI literacy their future careers will demand. No experience needed.',
 	},
 	{
 		label: 'Patient advocates',
@@ -76,7 +76,7 @@ export default function Audience() {
 				</ul>
 
 				<p className="mt-12 text-base sm:text-lg text-white/50 max-w-2xl">
-					No prior AI experience required — the day is designed for complete
+					No prior AI experience required. The day is designed for complete
 					beginners and experienced users alike.
 				</p>
 			</div>

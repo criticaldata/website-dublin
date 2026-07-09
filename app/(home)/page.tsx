@@ -18,13 +18,13 @@ const SITE_URL = 'https://criticaldata.github.io/website-dublin';
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export const metadata: Metadata = {
-	title: 'DubLINK AI in Healthcare LLM-athon — Dublin',
+	title: 'DubLINK AI in Healthcare LLM-athon, Dublin',
 	description:
 		'A one-day interactive LLM-athon exploring generative AI in healthcare. Saturday, 19 September 2026 at Tallaght University Hospital, Dublin, Ireland.',
 	openGraph: {
 		title: 'DubLINK AI in Healthcare LLM-athon',
 		description:
-			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare — 19 September 2026, Dublin.',
+			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare, 19 September 2026, Dublin.',
 		type: 'website',
 		url: SITE_URL,
 		siteName: 'DubLINK',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 				url: OG_IMAGE,
 				width: 1200,
 				height: 630,
-				alt: 'DubLINK AI in Healthcare LLM-athon — 19 September 2026, Dublin',
+				alt: 'DubLINK AI in Healthcare LLM-athon, 19 September 2026, Dublin',
 			},
 		],
 	},
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'DubLINK AI in Healthcare LLM-athon',
 		description:
-			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare — 19 September 2026, Dublin.',
+			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare, 19 September 2026, Dublin.',
 		images: [OG_IMAGE],
 	},
 };

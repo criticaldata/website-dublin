@@ -60,12 +60,13 @@ export default function Workshop() {
 						no spectators.
 					</span>
 				</h2>
-				<p className="text-base sm:text-lg text-white/55 max-w-3xl mb-14 leading-relaxed">
+				<p className="text-base sm:text-lg text-white/55 max-w-3xl mb-3 leading-relaxed">
 					Participants work in multidisciplinary groups using leading LLMs to
-					tackle realistic clinical and non-clinical healthcare scenarios —
-					with a focus on prompt engineering, clinical reasoning, AI
-					evaluation, cognitive bias, governance, ethics and safe
-					implementation.
+					tackle realistic clinical and non-clinical healthcare scenarios.
+				</p>
+				<p className="text-base sm:text-lg text-white/55 max-w-3xl mb-14 leading-relaxed">
+					The focus: prompt engineering, clinical reasoning, AI evaluation,
+					cognitive bias, governance, ethics and safe implementation.
 				</p>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">

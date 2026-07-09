@@ -40,7 +40,7 @@ export default function Venue() {
 					<div className="relative rounded-3xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl shadow-teal-900/20">
 						<LazyIframe
 							url={MAP_EMBED_URL}
-							title="Map — Tallaght University Hospital, Dublin"
+							title="Map of Tallaght University Hospital, Dublin"
 							className="aspect-[4/3] w-full"
 						/>
 						<a
@@ -76,13 +76,13 @@ export default function Venue() {
 								<TrainFront className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
 								<div>
 									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
-										From the City Centre — Luas Red Line
+										From the City Centre: Luas Red Line
 									</h3>
 									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
 										Board any Tallaght-bound Red Line tram in the city centre
 										(stops include Abbey Street, Jervis and Heuston) and ride
-										to the final stop, <strong className="text-white/80">Tallaght</strong>{' '}
-										— about 40&ndash;50 minutes. The hospital is approximately
+										to the final stop, <strong className="text-white/80">Tallaght</strong>,
+										about 40&ndash;50 minutes. The hospital is approximately
 										a five-minute walk from the stop.
 									</p>
 								</div>
