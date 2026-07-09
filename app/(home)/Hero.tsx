@@ -1,0 +1,126 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowRightIcon, ArrowDown } from 'lucide-react';
+
+export default function Hero() {
+	return (
+		<div className="relative min-h-screen flex items-center overflow-hidden">
+			{/* Grain overlay — atmospheric texture */}
+			<div
+				aria-hidden
+				className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay z-[1]"
+				style={{
+					backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+				}}
+			/>
+
+			{/* Radial glows — Liffey teal & Irish emerald */}
+			<div className="absolute -top-1/4 -right-1/4 h-[80vh] w-[80vh] bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.15)_0%,_transparent_60%)] pointer-events-none" />
+			<div className="absolute -bottom-1/4 -left-1/4 h-[70vh] w-[70vh] bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.12)_0%,_transparent_60%)] pointer-events-none" />
+
+			{/* Bottom fade */}
+			<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-[2]" />
+
+			{/* Content */}
+			<div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+				<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+					<div className="lg:col-span-8">
+						{/* Kicker — editorial */}
+						<div className="flex items-center gap-4 mb-10 animate-in fade-in-0 slide-in-from-top-2 duration-700">
+							<div className="h-px w-12 sm:w-20 bg-teal-400/60" />
+							<span className="text-[0.7rem] sm:text-xs uppercase tracking-[0.3em] text-teal-400/90 font-bold">
+								Connect &middot; Collaborate &middot; Innovate
+							</span>
+						</div>
+
+						{/* Asymmetric editorial title */}
+						<h1
+							className="font-bold tracking-tighter leading-[0.85] animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
+							style={{ animationDelay: '100ms', animationFillMode: 'both' }}
+						>
+							<span className="block text-[16vw] sm:text-8xl lg:text-[8.5rem] bg-gradient-to-br from-white via-white/90 to-white/40 bg-clip-text text-transparent">
+								DubLINK
+							</span>
+							<span className="block mt-2 text-[9vw] sm:text-5xl lg:text-[4.25rem] italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent pl-[4%] pr-4 pb-2">
+								AI in Healthcare LLM-athon
+							</span>
+						</h1>
+
+						{/* Subtitle */}
+						<div
+							className="mt-10 max-w-2xl lg:pl-[8%] animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
+							style={{ animationDelay: '300ms', animationFillMode: 'both' }}
+						>
+							<p className="text-xl sm:text-2xl font-medium text-white/90 tracking-tight leading-snug">
+								One day. Every discipline. Hands on with large language models
+								in healthcare.
+							</p>
+							<p className="mt-5 text-base sm:text-lg text-white/50 italic leading-relaxed max-w-xl">
+								Clinicians, researchers, students, engineers and patient
+								advocates — working side by side in the heart of Dublin.
+							</p>
+						</div>
+
+						{/* Editorial info bar */}
+						<div
+							className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 lg:pl-[8%] animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
+							style={{ animationDelay: '500ms', animationFillMode: 'both' }}
+						>
+							<div className="flex items-center gap-3">
+								<span className="inline-flex h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
+								<span className="text-sm text-white/70 font-medium tracking-wide">
+									Saturday, 19 September 2026
+								</span>
+							</div>
+							<span className="hidden sm:inline h-4 w-px bg-white/20" />
+							<span className="text-sm text-white/70 font-medium tracking-wide">
+								Tallaght University Hospital, Dublin, Ireland
+							</span>
+						</div>
+
+						{/* CTA + scroll hint */}
+						<div
+							className="mt-14 lg:pl-[8%] flex flex-col sm:flex-row items-start sm:items-center gap-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
+							style={{ animationDelay: '700ms', animationFillMode: 'both' }}
+						>
+							<Link href="#register">
+								<Button className="relative h-14 rounded-full px-8 text-base font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/30 transition-all duration-300 hover:shadow-teal-900/30 hover:-translate-y-0.5 group overflow-hidden">
+									<span className="relative flex items-center">
+										Register Your Interest
+										<ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+									</span>
+								</Button>
+							</Link>
+
+							<Link
+								href="#about"
+								className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-teal-300 transition-colors group"
+							>
+								<ArrowDown className="h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
+								Learn more about the event
+							</Link>
+						</div>
+					</div>
+
+					{/* Event logo */}
+					<div
+						className="hidden lg:flex lg:col-span-4 justify-center animate-in fade-in-0 zoom-in-95 duration-1000"
+						style={{ animationDelay: '400ms', animationFillMode: 'both' }}
+					>
+						<div className="relative rounded-3xl bg-white/95 p-6 shadow-2xl shadow-teal-900/30 ring-1 ring-white/20">
+							<Image
+								src="/dublin/dublink-logo.png"
+								alt="DubLINK LLM-athon — AI in Healthcare"
+								width={340}
+								height={340}
+								priority
+								className="h-auto w-full max-w-[340px]"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
