@@ -55,7 +55,7 @@ export default function RenderParticles() {
 						},
 					},
 					color: {
-						value: '#ffffff',
+						value: ['#99f6e4', '#5eead4', '#a5f3fc'],
 					},
 					opacity: {
 						value: 0.5,
@@ -69,10 +69,10 @@ export default function RenderParticles() {
 					},
 					links: {
 						enable: true,
-						color: '#7f1D1D',
+						color: '#14b8a6',
 						distance: 150,
-						opacity: 0.6,
-						width: 1.6,
+						opacity: 0.45,
+						width: 1.4,
 					},
 					move: {
 						enable: true,
