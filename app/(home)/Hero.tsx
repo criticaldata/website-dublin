@@ -22,6 +22,8 @@ const heroPhotos = [
 		src: '/dublin/photos/datathon2.jpeg',
 		alt: 'Datathon participants at MIT',
 		span: 'sm:col-span-2',
+		// Wide tile: frame the crowd rather than the dome so faces aren't cropped
+		position: 'object-[center_72%]',
 	},
 ];
 
