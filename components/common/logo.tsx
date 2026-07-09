@@ -4,20 +4,20 @@ import Link from 'next/link';
 export default function Logo() {
 	return (
 		<Link href="/">
-			<div className="flex items-center p-2">
-				<div>
-					<span className="sr-only">MIT</span>
+			<div className="flex items-center gap-2.5 p-2">
+				<div className="rounded-full bg-white/95 p-0.5">
+					<span className="sr-only">DubLINK</span>
 					<Image
-						className="h-10 w-auto"
-						src="/logo-mit-white.svg"
-						alt="MIT"
-						width={50}
-						height={50}
+						className="h-9 w-9 rounded-full object-cover"
+						src="/dublin/dublink-logo.png"
+						alt="DubLINK LLM-athon"
+						width={40}
+						height={40}
 					/>
 				</div>
 				<div className="font-semibold text-sm leading-4 text-gray-300 hover:text-white transition-colors">
-					<div>Critical</div>
-					<div>Data</div>
+					<div>DubLINK</div>
+					<div className="text-xs font-normal text-gray-400">LLM-athon</div>
 				</div>
 			</div>
 		</Link>

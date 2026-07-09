@@ -10,50 +10,45 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils';
 
 const navItems = [
 	{
-		label: 'Research',
-		href: '/research',
+		label: 'About',
+		href: '/#about',
 	},
 	{
-		label: 'Events',
-		href: '/events',
+		label: 'Programme',
+		href: '/#programme',
 	},
 	{
-		label: 'Highlights',
-		href: '/highlights',
+		label: 'Speakers',
+		href: '/#speakers',
 	},
 	{
-		label: 'Community',
-		href: '/community',
+		label: 'Venue',
+		href: '/#venue',
+	},
+	{
+		label: 'Partners',
+		href: '/#partners',
 	},
 ];
 
 export default function Header({ children }: { children?: React.ReactNode }) {
-	const pathname = usePathname();
 	return (
 		<nav className="w-full z-50 sticky bg-black top-0 flex items-center md:justify-between border-b border-white/10 h-16 px-4">
 			<Logo />
 			{/* Desktop Navigation */}
 			<div className="opacity-0 flex-1 md:opacity-100 md:flex md:gap-x-8 justify-center">
-				{navItems.map((item) => {
-					const isActive = pathname === item.href;
-					return (
-						<Link
-							key={item.href}
-							href={item.href}
-							className={cn(
-								'text-gray-400 hover:text-white transition-colors',
-								isActive && 'text-red-400 hover:text-red-400'
-							)}
-						>
-							<span>{item.label}</span>
-						</Link>
-					);
-				})}
+				{navItems.map((item) => (
+					<Link
+						key={item.href}
+						href={item.href}
+						className="text-gray-400 hover:text-white transition-colors"
+					>
+						<span>{item.label}</span>
+					</Link>
+				))}
 			</div>
 
 			{/* Mobile Navigation */}
@@ -83,11 +78,28 @@ export default function Header({ children }: { children?: React.ReactNode }) {
 								</Link>
 							</DropdownMenuItem>
 						))}
+						<DropdownMenuItem asChild>
+							<Link
+								href="/#register"
+								className="text-teal-300 hover:text-teal-200 cursor-pointer font-medium"
+							>
+								Register
+							</Link>
+						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
 			</div>
-			{/* Spacer for desktop */}
-			<div className="flex w-auto ml-2 justify-end md:w-[125px]">
+
+			{/* Register CTA — desktop */}
+			<div className="hidden md:flex w-auto ml-2 justify-end">
+				<Link href="/#register">
+					<Button
+						size="sm"
+						className="rounded-full px-5 font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white"
+					>
+						Register
+					</Button>
+				</Link>
 				{children}
 			</div>
 		</nav>
