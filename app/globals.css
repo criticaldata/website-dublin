@@ -71,3 +71,17 @@
 html {
 	scroll-behavior: smooth;
 }
+
+/* Respect reduced-motion: skip entrance animations and smooth scrolling */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-delay: 0ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}

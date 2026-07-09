@@ -21,7 +21,7 @@ const LazyIframe = ({ url, title, className }: LazyIframeProps) => {
 	}
 	return (
 		<div
-			className={cn("aspect-w-16 aspect-h-9 bg-black", className)}
+			className={cn("relative aspect-w-16 aspect-h-9 bg-black", className)}
 			ref={containerRef}
 		>
 			{lockRef.current && (
