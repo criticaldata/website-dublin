@@ -32,9 +32,11 @@ export default function Speakers() {
 					</span>
 				</div>
 
-				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.15] max-w-3xl mb-14">
-					<span className="block">Learn from leaders in</span>
-					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+				{/* Single line where it fits (no max-width clamp); wraps naturally
+				    on phones. "health AI" carries a warm amber highlight. */}
+				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.15] mb-14">
+					Learn from leaders in{' '}
+					<span className="italic bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
 						health AI.
 					</span>
 				</h2>
