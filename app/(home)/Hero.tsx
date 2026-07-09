@@ -2,6 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon, ArrowDown } from 'lucide-react';
+import PhotoGallery from '@/components/elements/PhotoGallery';
+
+const heroPhotos = [
+	{ src: '/dublin/photos/datathon1.jpeg', alt: 'Participants collaborating at a health datathon' },
+	{ src: '/dublin/photos/datathon2.jpeg', alt: 'Multidisciplinary group working together' },
+	{ src: '/dublin/photos/datathon3.jpeg', alt: 'Teams presenting their findings' },
+	{ src: '/dublin/photos/datathon4.jpeg', alt: 'Workshop discussion in progress' },
+];
 
 export default function Hero() {
 	return (
@@ -108,7 +116,7 @@ export default function Hero() {
 						className="hidden lg:flex lg:col-span-4 justify-center animate-in fade-in-0 zoom-in-95 duration-1000"
 						style={{ animationDelay: '400ms', animationFillMode: 'both' }}
 					>
-						<div className="relative rounded-3xl bg-white/95 p-6 shadow-2xl shadow-teal-900/30 ring-1 ring-white/20">
+						<div className="relative rounded-3xl bg-white p-6 shadow-2xl shadow-teal-900/30 ring-1 ring-white/20">
 							<Image
 								src="/dublin/dublink-logo.png"
 								alt="DubLINK LLM-athon — AI in Healthcare"
@@ -119,6 +127,24 @@ export default function Hero() {
 							/>
 						</div>
 					</div>
+				</div>
+
+				{/* The LLM-athon in action — click any photo to enlarge */}
+				<div
+					className="mt-16 lg:mt-20 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
+					style={{ animationDelay: '900ms', animationFillMode: 'both' }}
+				>
+					<div className="flex items-center gap-4 mb-5">
+						<div className="h-px w-8 bg-teal-400/40" />
+						<span className="text-[0.65rem] uppercase tracking-[0.3em] text-white/40 font-bold">
+							Datathons in action
+						</span>
+					</div>
+					<PhotoGallery
+						photos={heroPhotos}
+						className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
+						itemClassName="aspect-[4/3]"
+					/>
 				</div>
 			</div>
 		</div>

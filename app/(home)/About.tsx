@@ -1,10 +1,9 @@
-import Image from 'next/image';
+import PhotoGallery from '@/components/elements/PhotoGallery';
 
 const photos = [
-	{ src: '/dublin/photos/datathon1.jpeg', alt: 'Participants collaborating at a health datathon' },
-	{ src: '/dublin/photos/datathon2.jpeg', alt: 'Multidisciplinary group working together' },
-	{ src: '/dublin/photos/datathon3.jpeg', alt: 'Teams presenting their findings' },
-	{ src: '/dublin/photos/datathon4.jpeg', alt: 'Workshop discussion in progress' },
+	{ src: '/dublin/photos/datathon-2015.jpg', alt: 'MIT Critical Data datathon, 2015' },
+	{ src: '/dublin/photos/group-2017.jpg', alt: 'MIT Critical Data HST.953 group, 2017' },
+	{ src: '/dublin/photos/mimic.jpeg', alt: 'Working with the MIMIC critical care database' },
 ];
 
 export default function About() {
@@ -77,24 +76,12 @@ export default function About() {
 					</div>
 				</div>
 
-				{/* Photo strip — the datathon spirit */}
-				<div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-					{photos.map((photo) => (
-						<div
-							key={photo.src}
-							className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10"
-						>
-							<Image
-								src={photo.src}
-								alt={photo.alt}
-								fill
-								sizes="(max-width: 1024px) 50vw, 25vw"
-								className="object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-						</div>
-					))}
-				</div>
+				{/* A global community — click any photo to enlarge */}
+				<PhotoGallery
+					photos={photos}
+					className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
+					itemClassName="aspect-[4/3]"
+				/>
 
 				{/* Decorative accent */}
 				<div className="mt-20 flex items-center gap-4">
