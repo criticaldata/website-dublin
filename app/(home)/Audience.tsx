@@ -1,11 +1,39 @@
 const audiences = [
-	{ label: 'Doctors & nurses', connector: 'shaping', detail: 'care on the wards of Irish hospitals' },
-	{ label: 'Allied health professionals', connector: 'bringing', detail: 'every corner of the health service' },
-	{ label: 'Medical & healthcare students', connector: 'from', detail: 'campuses across Dublin and beyond' },
-	{ label: 'Patient advocates', connector: 'keeping', detail: 'the patient voice at the centre' },
-	{ label: 'Researchers & data scientists', connector: 'in', detail: 'AI, health and data science' },
-	{ label: 'Engineers & innovators', connector: 'building', detail: 'the tools clinicians will actually use' },
-	{ label: 'Healthcare managers & industry', connector: 'deciding', detail: 'how AI gets implemented in practice' },
+	{
+		label: 'Doctors & nurses',
+		detail:
+			'Clinicians of every grade and specialty who want to understand what LLMs can — and cannot — safely do in day-to-day patient care.',
+	},
+	{
+		label: 'Allied health professionals',
+		detail:
+			'Pharmacists, physiotherapists, radiographers, dietitians and colleagues across the health service exploring how AI fits their practice.',
+	},
+	{
+		label: 'Medical & healthcare students',
+		detail:
+			'Students of medicine, nursing and health sciences building the AI literacy their future careers will demand — no experience needed.',
+	},
+	{
+		label: 'Patient advocates',
+		detail:
+			'Patient and public voices who will keep the discussion grounded in what matters: safe, fair and transparent care.',
+	},
+	{
+		label: 'Researchers & data scientists',
+		detail:
+			'Academics and analysts working with health data who want to stress-test LLMs on realistic clinical problems.',
+	},
+	{
+		label: 'Engineers & innovators',
+		detail:
+			'Software engineers, developers and founders building health AI tools who want direct feedback from the clinicians who would use them.',
+	},
+	{
+		label: 'Healthcare managers & industry',
+		detail:
+			'Leaders and decision-makers responsible for how AI is procured, governed and rolled out across healthcare organisations.',
+	},
 ];
 
 export default function Audience() {
@@ -30,18 +58,19 @@ export default function Audience() {
 					table.
 				</h2>
 
-				{/* Flowing editorial list */}
-				<ul className="space-y-3 sm:space-y-4 max-w-3xl">
+				{/* Clear audience descriptions */}
+				<ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
 					{audiences.map((audience) => (
-						<li
-							key={audience.label}
-							className="group text-xl sm:text-2xl lg:text-[1.75rem] leading-snug tracking-tight text-white/45 transition-colors duration-300 hover:text-white/80"
-						>
-							<span className="font-bold text-white group-hover:text-teal-300 transition-colors duration-300">
-								{audience.label}
-							</span>{' '}
-							<span className="italic text-white/35">{audience.connector}</span>{' '}
-							{audience.detail}.
+						<li key={audience.label} className="group">
+							<div className="flex items-center gap-3 mb-2">
+								<span className="h-1.5 w-1.5 rounded-full bg-teal-400/80 group-hover:bg-teal-300 transition-colors" />
+								<h3 className="text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-teal-300 transition-colors duration-300">
+									{audience.label}
+								</h3>
+							</div>
+							<p className="pl-[18px] text-sm sm:text-base text-white/55 leading-relaxed">
+								{audience.detail}
+							</p>
 						</li>
 					))}
 				</ul>

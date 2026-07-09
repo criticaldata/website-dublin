@@ -3,7 +3,6 @@ import PhotoGallery from '@/components/elements/PhotoGallery';
 const photos = [
 	{ src: '/dublin/photos/datathon-2015.jpg', alt: 'MIT Critical Data datathon, 2015' },
 	{ src: '/dublin/photos/group-2017.jpg', alt: 'MIT Critical Data HST.953 group, 2017' },
-	{ src: '/dublin/photos/mimic.jpeg', alt: 'Working with the MIMIC critical care database' },
 ];
 
 export default function About() {
@@ -79,8 +78,8 @@ export default function About() {
 				{/* A global community — click any photo to enlarge */}
 				<PhotoGallery
 					photos={photos}
-					className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4"
-					itemClassName="aspect-[4/3]"
+					className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
+					itemClassName="aspect-[16/10]"
 				/>
 
 				{/* Decorative accent */}

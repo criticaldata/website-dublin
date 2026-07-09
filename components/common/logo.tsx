@@ -5,11 +5,11 @@ export default function Logo() {
 	return (
 		<Link href="/">
 			<div className="flex items-center gap-2.5 p-2">
-				<div className="rounded-full bg-white/95 p-0.5">
+				<div className="rounded-full bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 ring-1 ring-teal-400/40 p-0.5">
 					<span className="sr-only">DubLINK</span>
 					<Image
 						className="h-9 w-9 rounded-full object-cover"
-						src="/dublin/dublink-logo.png"
+						src="/dublin/dublink-mark.png"
 						alt="DubLINK LLM-athon"
 						width={40}
 						height={40}

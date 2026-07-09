@@ -6,7 +6,7 @@ const DIRECTIONS_URL =
 	'https://www.tuh.ie/Departments/Centre-for-Learning-Development/Map-Directions.html';
 
 const MAP_EMBED_URL =
-	'https://maps.google.com/maps?q=Tallaght%20University%20Hospital%2C%20Dublin%2C%20Ireland&z=13&output=embed';
+	'https://maps.google.com/maps?q=Tallaght%20University%20Hospital%2C%20Dublin%2C%20Ireland&z=15&hl=en&output=embed';
 
 const GOOGLE_MAPS_URL =
 	'https://www.google.com/maps/dir/?api=1&destination=Tallaght+University+Hospital,+Dublin,+Ireland';

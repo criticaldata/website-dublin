@@ -5,15 +5,43 @@ import { ArrowRightIcon, ArrowDown } from 'lucide-react';
 import PhotoGallery from '@/components/elements/PhotoGallery';
 
 const heroPhotos = [
-	{ src: '/dublin/photos/datathon1.jpeg', alt: 'Participants collaborating at a health datathon' },
-	{ src: '/dublin/photos/datathon2.jpeg', alt: 'Multidisciplinary group working together' },
-	{ src: '/dublin/photos/datathon3.jpeg', alt: 'Teams presenting their findings' },
-	{ src: '/dublin/photos/datathon4.jpeg', alt: 'Workshop discussion in progress' },
+	{
+		src: '/dublin/photos/datathon1.jpeg',
+		alt: 'Participants at the MakeHealth Colombia datathon',
+		span: 'sm:col-span-2 sm:row-span-2',
+	},
+	{
+		src: '/dublin/photos/datathon3.jpeg',
+		alt: 'Teams celebrating at a health datathon workshop',
+	},
+	{
+		src: '/dublin/photos/datathon4.jpeg',
+		alt: 'Datathon cohort gathered under the atrium',
+	},
+	{
+		src: '/dublin/photos/datathon2.jpeg',
+		alt: 'Datathon participants at MIT',
+		span: 'sm:col-span-2',
+	},
 ];
 
 export default function Hero() {
 	return (
 		<div className="relative min-h-screen flex items-center overflow-hidden">
+			{/* Cinematic photo backdrop */}
+			<div aria-hidden className="absolute inset-0">
+				<Image
+					src="/dublin/photos/datathon2.jpeg"
+					alt=""
+					fill
+					priority
+					sizes="100vw"
+					className="object-cover object-center opacity-60"
+				/>
+				<div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black" />
+				<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/30" />
+			</div>
+
 			{/* Grain overlay — atmospheric texture */}
 			<div
 				aria-hidden
@@ -92,14 +120,16 @@ export default function Hero() {
 							className="mt-14 lg:pl-[8%] flex flex-col sm:flex-row items-start sm:items-center gap-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
 							style={{ animationDelay: '700ms', animationFillMode: 'both' }}
 						>
-							<Link href="#register">
-								<Button className="relative h-14 rounded-full px-8 text-base font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/30 transition-all duration-300 hover:shadow-teal-900/30 hover:-translate-y-0.5 group overflow-hidden">
-									<span className="relative flex items-center">
-										Register Your Interest
-										<ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-									</span>
-								</Button>
-							</Link>
+							{/* Intentionally inert — registration opens later */}
+							<Button
+								type="button"
+								className="relative h-14 rounded-full px-8 text-base font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/30 transition-all duration-300 hover:shadow-teal-900/30 hover:-translate-y-0.5 group overflow-hidden"
+							>
+								<span className="relative flex items-center">
+									Register Your Interest
+									<ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+								</span>
+							</Button>
 
 							<Link
 								href="#about"
@@ -111,19 +141,23 @@ export default function Hero() {
 						</div>
 					</div>
 
-					{/* Event logo */}
+					{/* Event logo — floats free on the dark backdrop */}
 					<div
 						className="hidden lg:flex lg:col-span-4 justify-center animate-in fade-in-0 zoom-in-95 duration-1000"
 						style={{ animationDelay: '400ms', animationFillMode: 'both' }}
 					>
-						<div className="relative rounded-3xl bg-white p-6 shadow-2xl shadow-teal-900/30 ring-1 ring-white/20">
+						<div className="relative">
+							<div
+								aria-hidden
+								className="absolute inset-0 scale-110 bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.25)_0%,_rgba(6,182,212,0.08)_45%,_transparent_70%)] blur-2xl"
+							/>
 							<Image
-								src="/dublin/dublink-logo.png"
+								src="/dublin/dublink-logo-dark.png"
 								alt="DubLINK LLM-athon — AI in Healthcare"
-								width={340}
-								height={340}
+								width={400}
+								height={358}
 								priority
-								className="h-auto w-full max-w-[340px]"
+								className="relative h-auto w-full max-w-[400px] drop-shadow-[0_0_35px_rgba(20,184,166,0.2)]"
 							/>
 						</div>
 					</div>
@@ -142,8 +176,8 @@ export default function Hero() {
 					</div>
 					<PhotoGallery
 						photos={heroPhotos}
-						className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
-						itemClassName="aspect-[4/3]"
+						className="grid grid-cols-2 sm:grid-cols-4 sm:auto-rows-[170px] lg:auto-rows-[200px] gap-3 sm:gap-4"
+						itemClassName="aspect-[4/3] sm:aspect-auto"
 					/>
 				</div>
 			</div>
