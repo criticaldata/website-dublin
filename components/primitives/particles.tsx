@@ -4,7 +4,14 @@ import type { Container, Engine } from 'tsparticles-engine';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 
-export default function RenderParticles() {
+export default function RenderParticles({
+	fullScreen = true,
+}: {
+	/** Set false to contain the canvas within its own positioned parent
+	 *  instead of covering the whole viewport (used inside Hero, whose
+	 *  photo backdrop otherwise fully occludes the page-wide layer). */
+	fullScreen?: boolean;
+}) {
 	const particlesInit = useCallback(async (engine: Engine) => {
 		// you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
 		// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -93,6 +100,10 @@ export default function RenderParticles() {
 					},
 				},
 				detectRetina: true,
+				fullScreen: {
+					enable: fullScreen,
+					zIndex: 0,
+				},
 			}}
 		/>
 	);

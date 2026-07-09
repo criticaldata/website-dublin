@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon, ArrowDown } from 'lucide-react';
 import PhotoGallery from '@/components/elements/PhotoGallery';
+import RenderParticles from '@/components/primitives/particles';
 
 const heroPhotos = [
 	{
@@ -63,6 +64,14 @@ export default function Hero() {
 
 			{/* Bottom fade */}
 			<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-[2]" />
+
+			{/* The page-wide particle network sits behind Hero's own opaque
+			    photo backdrop and would otherwise be invisible here, so Hero
+			    gets its own contained layer, floating over the photo,
+			    under the text */}
+			<div aria-hidden className="absolute inset-0 z-[3] pointer-events-none">
+				<RenderParticles fullScreen={false} />
+			</div>
 
 			{/* Content */}
 			<div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
