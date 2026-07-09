@@ -13,7 +13,7 @@ const committee = [
 		title: 'AI Researcher, MIT Critical Data',
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
-		role: 'AI researcher at MIT Critical Data working at the intersection of machine learning and global health. Connects the event to the international datathon community it grew out of.',
+		role: 'AI researcher at MIT Critical Data and Senior AI/ML Software Engineer at Workday, working at the intersection of machine learning and global health — currently focused on scaling human-AI systems.',
 	},
 	{
 		name: 'Dr Leo Anthony Celi',

@@ -63,7 +63,7 @@ export default function Programme() {
 					One packed day,{' '}
 					<span className="italic text-white/50">start to finish.</span>
 				</h2>
-				<p className="text-base sm:text-lg text-white/50 max-w-2xl mb-14">
+				<p className="text-base sm:text-lg text-white/50 max-w-2xl mb-8 sm:mb-14">
 					Keynotes in the morning, hands-on LLM activities through the
 					afternoon, closing with a panel on the future of AI in Irish
 					healthcare.
@@ -74,18 +74,18 @@ export default function Programme() {
 					{sessions.map((session) => (
 						<li
 							key={session.time}
-							className="group relative flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 rounded-xl px-5 py-4 -ml-px border-l-2 border-transparent hover:border-teal-400/70 hover:bg-white/[0.03] transition-all duration-300"
+							className="group relative flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-6 rounded-xl px-4 sm:px-5 py-2.5 sm:py-4 -ml-px border-l-2 border-transparent hover:border-teal-400/70 hover:bg-white/[0.03] transition-all duration-300"
 						>
-							<span className="flex items-center gap-3 shrink-0 sm:w-36">
+							<span className="flex items-center gap-2.5 sm:gap-3 shrink-0 sm:w-36">
 								<span
 									className={`inline-flex h-1.5 w-1.5 rounded-full ${kindStyles[session.kind]}`}
 								/>
-								<span className="font-mono text-xs sm:text-sm text-white/45 tracking-wide">
+								<span className="font-mono text-[11px] sm:text-sm text-white/45 tracking-wide">
 									{session.time}
 								</span>
 							</span>
 							<span
-								className={`text-base sm:text-lg tracking-tight ${
+								className={`pl-4 sm:pl-0 text-[15px] leading-snug sm:text-lg tracking-tight ${
 									session.kind === 'break'
 										? 'text-white/40 italic'
 										: 'text-white/85 font-medium group-hover:text-white'
