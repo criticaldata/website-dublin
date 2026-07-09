@@ -34,7 +34,7 @@ export default function About() {
 				</div>
 
 				{/* Big editorial statement */}
-				<h2 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold tracking-tighter text-white leading-[1] max-w-5xl">
+				<h2 className="text-4xl sm:text-5xl lg:text-[4rem] font-bold tracking-tighter text-white leading-[1.1] max-w-5xl">
 					A one-day interactive LLM-athon where Dublin&rsquo;s healthcare
 					community{' '}
 					<span className="italic inline-block bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent pr-2">

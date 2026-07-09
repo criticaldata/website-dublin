@@ -33,9 +33,9 @@ export default function RegisterCTA() {
 				</div>
 
 				{/* Headline */}
-				<h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter text-white leading-[0.95] mb-8">
-					Be there when Dublin{' '}
-					<span className="italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+				<h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter text-white leading-[1.05] mb-8">
+					<span className="block">Be there when Dublin</span>
+					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 						meets AI.
 					</span>
 				</h2>

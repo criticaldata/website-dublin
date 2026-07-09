@@ -32,9 +32,9 @@ export default function Speakers() {
 					</span>
 				</div>
 
-				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.05] max-w-3xl mb-14">
-					Learn from leaders in{' '}
-					<span className="italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.15] max-w-3xl mb-14">
+					<span className="block">Learn from leaders in</span>
+					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 						health AI.
 					</span>
 				</h2>

@@ -59,9 +59,9 @@ export default function Partners() {
 					</span>
 				</div>
 
-				<h2 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white leading-[1.05] max-w-3xl mb-4">
-					Made possible by{' '}
-					<span className="italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+				<h2 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white leading-[1.15] max-w-3xl mb-4">
+					<span className="block">Made possible by</span>
+					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 						our partners.
 					</span>
 				</h2>

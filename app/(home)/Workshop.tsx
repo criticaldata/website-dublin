@@ -55,8 +55,9 @@ export default function Workshop() {
 				</div>
 
 				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.05] max-w-4xl mb-6">
-					Real scenarios, leading LLMs,{' '}
-					<span className="italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+					<span className="block">Real scenarios,</span>
+					<span className="block">leading LLMs,</span>
+					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 						no spectators.
 					</span>
 				</h2>
