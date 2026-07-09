@@ -1,8 +1,15 @@
 import Link from 'next/link';
-import { MapPin, TrainFront, Car, ExternalLink } from 'lucide-react';
+import { MapPin, TrainFront, Car, ExternalLink, Navigation } from 'lucide-react';
+import LazyIframe from '@/components/primitives/lazy-iframe';
 
 const DIRECTIONS_URL =
 	'https://www.tuh.ie/Departments/Centre-for-Learning-Development/Map-Directions.html';
+
+const MAP_EMBED_URL =
+	'https://maps.google.com/maps?q=Tallaght%20University%20Hospital%2C%20Dublin%2C%20Ireland&z=13&output=embed';
+
+const GOOGLE_MAPS_URL =
+	'https://www.google.com/maps/dir/?api=1&destination=Tallaght+University+Hospital,+Dublin,+Ireland';
 
 export default function Venue() {
 	return (
@@ -28,53 +35,87 @@ export default function Venue() {
 					</span>
 				</h2>
 
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5">
-					<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-8">
-						<MapPin className="h-6 w-6 text-teal-300/80 mb-4" />
-						<h3 className="text-lg font-bold text-white tracking-tight mb-2">
-							The Venue
-						</h3>
-						<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-							Centre for Learning and Development,
-							<br />
-							Tallaght University Hospital,
-							<br />
-							Dublin, Ireland.
-						</p>
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+					{/* Interactive map */}
+					<div className="relative rounded-3xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl shadow-teal-900/20">
+						<LazyIframe
+							url={MAP_EMBED_URL}
+							title="Map — Tallaght University Hospital, Dublin"
+							className="aspect-[4/3] w-full"
+						/>
+						<a
+							href={GOOGLE_MAPS_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-black/70 backdrop-blur-sm border border-white/20 px-4 py-2 text-xs sm:text-sm font-medium text-white hover:bg-black/90 hover:border-teal-400/50 transition-all"
+						>
+							<Navigation className="h-3.5 w-3.5 text-teal-300" />
+							Open directions in Google Maps
+						</a>
 					</div>
 
-					<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-8">
-						<TrainFront className="h-6 w-6 text-teal-300/80 mb-4" />
-						<h3 className="text-lg font-bold text-white tracking-tight mb-2">
-							By Luas
-						</h3>
-						<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-							Easily accessible via the Luas Red Line from Dublin City Centre.
-							Exit at the Tallaght Stop — approximately a five-minute walk from
-							the hospital.
-						</p>
-					</div>
+					{/* How to get there */}
+					<div className="space-y-4">
+						<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6">
+							<div className="flex items-start gap-4">
+								<MapPin className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
+								<div>
+									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
+										The Venue
+									</h3>
+									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
+										Centre for Learning and Development, Tallaght University
+										Hospital, Dublin 24.
+									</p>
+								</div>
+							</div>
+						</div>
 
-					<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-8">
-						<Car className="h-6 w-6 text-teal-300/80 mb-4" />
-						<h3 className="text-lg font-bold text-white tracking-tight mb-2">
-							By Car
-						</h3>
-						<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-							Public parking is available on the hospital campus.
-						</p>
+						<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6">
+							<div className="flex items-start gap-4">
+								<TrainFront className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
+								<div>
+									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
+										From the City Centre — Luas Red Line
+									</h3>
+									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
+										Board any Tallaght-bound Red Line tram in the city centre
+										(stops include Abbey Street, Jervis and Heuston) and ride
+										to the final stop, <strong className="text-white/80">Tallaght</strong>{' '}
+										— about 40&ndash;50 minutes. The hospital is approximately
+										a five-minute walk from the stop.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6">
+							<div className="flex items-start gap-4">
+								<Car className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
+								<div>
+									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
+										By Car
+									</h3>
+									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
+										Roughly 30 minutes from the city centre via the N81 or M50
+										(Junction 11). Public parking is available on the hospital
+										campus.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<Link
+							href={DIRECTIONS_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-2 px-1 text-sm font-medium text-teal-300/90 hover:text-teal-200 transition-colors"
+						>
+							Official directions and campus map
+							<ExternalLink className="h-4 w-4" />
+						</Link>
 					</div>
 				</div>
-
-				<Link
-					href={DIRECTIONS_URL}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-teal-300/90 hover:text-teal-200 transition-colors"
-				>
-					Directions and campus map
-					<ExternalLink className="h-4 w-4" />
-				</Link>
 			</div>
 		</section>
 	);
