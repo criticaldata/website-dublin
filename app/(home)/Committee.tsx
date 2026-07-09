@@ -25,7 +25,7 @@ const committee = [
 	{
 		name: 'Dr Tamas Tiszai-Szűcs',
 		title: 'Consultant Intensivist, TUH',
-		photo: null,
+		photo: '/dublin/team/tamas-tiszai-szucs.jpg',
 		initials: 'TT',
 		role: 'Consultant Intensivist and Quality & Audit Lead at Tallaght University Hospital, the host venue. Focused on AI, patient safety and human factors in clinical practice.',
 	},
