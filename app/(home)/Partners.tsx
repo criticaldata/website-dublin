@@ -1,6 +1,12 @@
 import Image from 'next/image';
 
-const partners = [
+const partners: {
+	name: string;
+	logo: string;
+	width: number;
+	height: number;
+	wordmark?: string;
+}[] = [
 	{
 		name: 'Tallaght University Hospital',
 		logo: '/dublin/partners/tallaght-university-hospital.png',
@@ -24,6 +30,9 @@ const partners = [
 		logo: '/logo-mit.svg',
 		width: 200,
 		height: 105,
+		// The MIT SVG is only the bars mark — the org's identity includes the
+		// wordmark, so render it as text beneath the logo
+		wordmark: 'MIT CRITICAL DATA',
 	},
 	{
 		name: 'PLOS Digital Health',
@@ -66,15 +75,20 @@ export default function Partners() {
 					{partners.map((partner) => (
 						<div
 							key={partner.name}
-							className="group relative flex items-center justify-center rounded-2xl bg-white px-8 py-10 min-h-[130px] sm:min-h-[160px] ring-1 ring-white/20 hover:ring-teal-400/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300"
+							className="group relative flex flex-col items-center justify-center gap-3 rounded-2xl bg-white px-8 py-10 min-h-[130px] sm:min-h-[160px] ring-1 ring-white/20 hover:ring-teal-400/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300"
 						>
 							<Image
 								src={partner.logo}
 								alt={partner.name}
 								width={partner.width}
 								height={partner.height}
-								className="h-auto max-h-16 sm:max-h-20 w-auto max-w-full object-contain"
+								className={`h-auto w-auto max-w-full object-contain ${partner.wordmark ? 'max-h-12 sm:max-h-14' : 'max-h-16 sm:max-h-20'}`}
 							/>
+							{partner.wordmark && (
+								<span className="text-sm sm:text-base font-bold tracking-[0.18em] text-gray-800">
+									{partner.wordmark}
+								</span>
+							)}
 						</div>
 					))}
 				</div>
