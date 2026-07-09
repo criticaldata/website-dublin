@@ -2,32 +2,18 @@ import Image from 'next/image';
 
 const committee = [
 	{
-		name: 'Dr Muhammad Ali',
-		title: 'Workshop & Scientific Content Lead',
-		photo: null,
-		initials: 'MA',
-		role: 'Researcher and educator in artificial intelligence and digital health. Leads the design of the day’s workshops and scientific content, shaping the clinical scenarios participants will work through.',
+		name: 'Dr Leo Anthony Celi',
+		title: 'Clinical Advisor',
+		photo: '/dublin/team/leo-celi.jpg',
+		initials: 'LC',
+		role: 'Advises on the clinical direction of the programme, drawing on years of datathons organised with MIT Critical Data around the world.',
 	},
 	{
 		name: 'Mr Sebastian Cajas',
 		title: 'AI Researcher, MIT Critical Data',
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
-		role: 'AI researcher at MIT Critical Data and Senior AI/ML Software Engineer at Workday, working at the intersection of machine learning and global health — currently focused on scaling human-AI systems.',
-	},
-	{
-		name: 'Dr Leo Anthony Celi',
-		title: 'Clinical Advisor',
-		photo: '/dublin/team/leo-celi.jpg',
-		initials: 'LC',
-		role: 'Intensivist and internationally recognised expert in AI, critical care and health data science. Advises on the clinical direction of the programme, drawing on years of datathons organised around the world.',
-	},
-	{
-		name: 'Dr Daria Kalinska-Lysiak',
-		title: 'Clinician & Data Scientist',
-		photo: '/dublin/team/daria-kalinska-lysiak.png',
-		initials: 'DK',
-		role: 'Clinician and data scientist, clinical educator and researcher. Brings a dual clinical–technical perspective, with interests in clinical innovation, simulation, and precision and personalised medicine.',
+		role: 'AI researcher at MIT Critical Data, working at the intersection of human-AI systems and global health.',
 	},
 	{
 		name: 'Dr Ezi Ozoani',
@@ -42,6 +28,20 @@ const committee = [
 		photo: null,
 		initials: 'TT',
 		role: 'Consultant Intensivist and Quality & Audit Lead at Tallaght University Hospital, the host venue. Focused on AI, patient safety and human factors in clinical practice.',
+	},
+	{
+		name: 'Dr Daria Kalinska-Lysiak',
+		title: 'Clinician & Data Scientist',
+		photo: '/dublin/team/daria-kalinska-lysiak.png',
+		initials: 'DK',
+		role: 'Clinician and data scientist, clinical educator and researcher. Brings a dual clinical–technical perspective, with interests in clinical innovation, simulation, and precision and personalised medicine.',
+	},
+	{
+		name: 'Dr Muhammad Ali',
+		title: 'Workshop & Scientific Content Lead',
+		photo: null,
+		initials: 'MA',
+		role: 'Researcher and educator in artificial intelligence and digital health. Leads the design of the day’s workshops and scientific content, shaping the clinical scenarios participants will work through.',
 	},
 ];
 
