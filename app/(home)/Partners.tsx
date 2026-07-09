@@ -66,7 +66,7 @@ export default function Partners() {
 					{partners.map((partner) => (
 						<div
 							key={partner.name}
-							className="group relative flex items-center justify-center rounded-2xl bg-white/[0.97] px-8 py-10 min-h-[130px] sm:min-h-[160px] ring-1 ring-white/20 hover:ring-teal-400/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300"
+							className="group relative flex items-center justify-center rounded-2xl bg-white px-8 py-10 min-h-[130px] sm:min-h-[160px] ring-1 ring-white/20 hover:ring-teal-400/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-900/30 transition-all duration-300"
 						>
 							<Image
 								src={partner.logo}
