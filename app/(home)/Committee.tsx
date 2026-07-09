@@ -25,7 +25,7 @@ const committee = [
 	{
 		name: 'Dr Daria Kalinska-Lysiak',
 		title: 'Clinician & Data Scientist',
-		photo: null,
+		photo: '/dublin/team/daria-kalinska-lysiak.png',
 		initials: 'DK',
 		role: 'Clinician and data scientist, clinical educator and researcher. Brings a dual clinical–technical perspective, with interests in clinical innovation, simulation, and precision and personalised medicine.',
 	},

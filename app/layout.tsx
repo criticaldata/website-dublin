@@ -8,15 +8,23 @@ import { Suspense } from 'react';
 import Spinner from '@/components/primitives/spinner';
 import { Toaster } from '@/components/ui/sonner';
 
-const defaultUrl = process.env.VERCEL_URL
-	? `https://${process.env.VERCEL_URL}`
-	: 'http://localhost:3000';
+// basePath is baked in at build time (GitHub Pages serves under /website-dublin);
+// icon URLs must carry it or they 404 on the deployed site.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 export const metadata = {
-	metadataBase: new URL(defaultUrl),
+	metadataBase: new URL('https://criticaldata.github.io/website-dublin'),
 	title: 'DubLINK AI in Healthcare LLM-athon',
 	description:
 		'A one-day interactive educational event exploring Large Language Models and generative AI in healthcare. Saturday, 19 September 2026 at Tallaght University Hospital, Dublin, Ireland.',
+	icons: {
+		icon: [
+			{ url: `${basePath}/favicon.ico`, sizes: 'any' },
+			{ url: `${basePath}/icon-192.png`, type: 'image/png', sizes: '192x192' },
+			{ url: `${basePath}/icon-512.png`, type: 'image/png', sizes: '512x512' },
+		],
+		apple: `${basePath}/apple-touch-icon.png`,
+	},
 };
 
 const geistSans = Geist({

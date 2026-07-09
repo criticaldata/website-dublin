@@ -12,9 +12,11 @@ interface LazyIframeProps {
 const LazyIframe = ({ url, title, className }: LazyIframeProps) => {
 	const containerRef = useRef<HTMLDivElement | null>(null);
 	const lockRef = useRef(false);
-	// Use Intersection Observer to determine if the iframe should be loaded
+	// Start loading well before the iframe scrolls into view so heavy embeds
+	// (e.g. Google Maps) are ready by the time the user reaches them
 	const { isIntersecting } = useIntersectionObserver(
-		containerRef as React.RefObject<HTMLElement>
+		containerRef as React.RefObject<HTMLElement>,
+		{ rootMargin: '1200px 0px' }
 	);
 	if (isIntersecting) {
 		lockRef.current = true;

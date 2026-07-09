@@ -12,6 +12,11 @@ import Partners from './Partners';
 import RegisterCTA from './RegisterCTA';
 import StickyRegister from './StickyRegister';
 
+const SITE_URL = 'https://criticaldata.github.io/website-dublin';
+// Absolute URL on purpose: WhatsApp and other scrapers reject relative
+// og:image paths, and metadataBase would drop the /website-dublin prefix.
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+
 export const metadata: Metadata = {
 	title: 'DubLINK AI in Healthcare LLM-athon — Dublin',
 	description:
@@ -21,6 +26,23 @@ export const metadata: Metadata = {
 		description:
 			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare — 19 September 2026, Dublin.',
 		type: 'website',
+		url: SITE_URL,
+		siteName: 'DubLINK',
+		images: [
+			{
+				url: OG_IMAGE,
+				width: 1200,
+				height: 630,
+				alt: 'DubLINK AI in Healthcare LLM-athon — 19 September 2026, Dublin',
+			},
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'DubLINK AI in Healthcare LLM-athon',
+		description:
+			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare — 19 September 2026, Dublin.',
+		images: [OG_IMAGE],
 	},
 };
 
