@@ -78,8 +78,8 @@ export default function Committee() {
 				<p className="text-base sm:text-lg text-white/50 max-w-3xl mb-14">
 					DubLINK is organised by a multidisciplinary team of clinicians, AI
 					researchers and educators spanning Tallaght University Hospital, MIT
-					Critical Data and the wider Irish and international health AI
-					community.
+					Critical Data, MedWrite.ai and the wider Irish and international
+					health AI community.
 				</p>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
