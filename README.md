@@ -1,10 +1,24 @@
-# Getting Started
+# DubLINK AI in Healthcare LLM-athon — Website
 
-1. Add a `.env.local` file with the supabase credentials (refer to `.env.example`).
-2. Install dependencies using `npm i`, then run the dev server using `npm run dev`.
+Website for the DubLINK AI in Healthcare LLM-athon: a one-day interactive
+educational event on Large Language Models and generative AI in healthcare.
 
-# Contributing
+**Saturday, 19 September 2026 · Centre for Learning and Development, Tallaght
+University Hospital, Dublin, Ireland**
 
-Create a new branch and push upstream to remote. When your feature is completed, submit a PR to merge into main. The site admin will proceed to review / merge and deploy to vercel.
+## Getting Started
 
-Note: Do not push directly to `main`
+1. Install dependencies: `npm i`
+2. Run the dev server: `npm run dev`
+3. Open http://localhost:3000
+
+## Build
+
+```
+npm run build
+npm start
+```
+
+## Contact
+
+General enquiries: dublink.llmathon@gmail.com
