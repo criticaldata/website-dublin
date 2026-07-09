@@ -55,7 +55,9 @@ export default function PhotoGallery({
 							sizes="(max-width: 1024px) 50vw, 33vw"
 							className={`object-cover group-hover:scale-105 transition-transform duration-700 ease-out ${photo.position ?? ''}`}
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90 group-hover:opacity-50 transition-opacity duration-300" />
+						{/* Subtle at rest so the photo itself stays visible; darkens
+						    only on hover, when the caption needs contrast to read */}
+						<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-20 group-hover:opacity-90 transition-opacity duration-300" />
 						<span className="absolute bottom-3 left-4 right-12 text-left text-xs sm:text-sm font-medium text-white/85 leading-snug drop-shadow-md opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
 							{photo.alt}
 						</span>
