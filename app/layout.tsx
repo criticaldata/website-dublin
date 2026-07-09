@@ -6,7 +6,6 @@ import './globals.css';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import { Suspense } from 'react';
 import Spinner from '@/components/primitives/spinner';
-import AuthBtns from '@/components/common/auth-btns';
 import { Toaster } from '@/components/ui/sonner';
 
 const defaultUrl = process.env.VERCEL_URL
@@ -15,9 +14,9 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata = {
 	metadataBase: new URL(defaultUrl),
-	title: 'MIT Critical Data',
+	title: 'DubLINK AI in Healthcare LLM-athon',
 	description:
-		'Building a global community committed to developing & improving health AI.',
+		'A one-day interactive educational event exploring Large Language Models and generative AI in healthcare. Saturday, 19 September 2026 at Tallaght University Hospital, Dublin, Ireland.',
 };
 
 const geistSans = Geist({
@@ -37,9 +36,7 @@ export default function RootLayout({
 					<NuqsAdapter>
 						<ThemeProvider>
 							<main className="min-h-screen flex flex-col items-center">
-								<Header>
-									<AuthBtns />
-								</Header>
+								<Header />
 								<div className="flex-1 w-full">{children}</div>
 								<Footer />
 							</main>
