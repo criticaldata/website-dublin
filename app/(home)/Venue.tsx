@@ -28,9 +28,9 @@ export default function Venue() {
 					</span>
 				</div>
 
-				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.05] max-w-4xl mb-14">
-					In the heart of{' '}
-					<span className="italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+				<h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.15] max-w-4xl mb-14">
+					<span className="block">In the heart of</span>
+					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
 						Dublin healthcare.
 					</span>
 				</h2>

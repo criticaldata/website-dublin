@@ -78,13 +78,15 @@ export default function Hero() {
 
 						{/* Asymmetric editorial title */}
 						<h1
-							className="font-bold tracking-tighter leading-[0.85] animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
+							className="font-bold tracking-tighter animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
 							style={{ animationDelay: '100ms', animationFillMode: 'both' }}
 						>
-							<span className="block text-[16vw] sm:text-8xl lg:text-[8.5rem] text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
+							<span className="block leading-[0.85] text-[16vw] sm:text-8xl lg:text-[8.5rem] text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
 								DubLINK
 							</span>
-							<span className="block mt-2 text-[9vw] sm:text-5xl lg:text-[4.25rem] italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent pl-[4%] pr-4 pb-2">
+							{/* Own leading so a mobile wrap to two lines doesn't collide
+							    with itself under the tight leading used above */}
+							<span className="block mt-2 leading-[1.15] text-[9vw] sm:text-5xl lg:text-[4.25rem] italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent pl-[4%] pr-4 pb-2">
 								AI in Healthcare LLM-athon
 							</span>
 						</h1>
