@@ -1,6 +1,13 @@
 import Image from 'next/image';
 
-const committee = [
+const committee: {
+	name: string;
+	title: string;
+	photo: string | null;
+	photoPosition?: string;
+	initials: string;
+	role: string;
+}[] = [
 	{
 		name: 'Dr Leo Anthony Celi',
 		title: 'Clinical Advisor',
@@ -26,6 +33,8 @@ const committee = [
 		name: 'Dr Tamas Tiszai-Szűcs',
 		title: 'Consultant Intensivist, TUH',
 		photo: '/dublin/team/tamas-tiszai-szucs.jpg',
+		// Portrait crop: keep the face centred in the circular avatar
+		photoPosition: 'object-[center_22%]',
 		initials: 'TT',
 		role: 'Consultant Intensivist and Quality & Audit Lead at Tallaght University Hospital, the host venue. Focused on AI, patient safety and human factors in clinical practice.',
 	},
@@ -89,7 +98,7 @@ export default function Committee() {
 											alt={member.name}
 											fill
 											sizes="64px"
-											className="object-cover"
+											className={`object-cover ${member.photoPosition ?? ''}`}
 										/>
 									</div>
 								) : (
