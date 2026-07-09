@@ -6,18 +6,18 @@ const sessions = [
 	{ time: '11:15–11:45', title: 'Introduction to the LLM-athon', kind: 'plenary' },
 	{
 		time: '11:45–12:30',
-		title: 'Activity 1 — Prompt Engineering & Clinical Reasoning',
+		title: 'Activity 1: Prompt Engineering & Clinical Reasoning',
 		kind: 'activity',
 	},
 	{ time: '12:30–13:30', title: 'Lunch & Networking', kind: 'break' },
 	{
 		time: '13:30–14:15',
-		title: 'Activity 2 — Evaluating LLM Responses',
+		title: 'Activity 2: Evaluating LLM Responses',
 		kind: 'activity',
 	},
 	{
 		time: '14:15–15:00',
-		title: 'Activity 3 — LLM Failure Modes & Safe Implementation',
+		title: 'Activity 3: LLM Failure Modes & Safe Implementation',
 		kind: 'activity',
 	},
 	{ time: '15:00–15:15', title: 'Coffee Break', kind: 'break' },
@@ -28,7 +28,7 @@ const sessions = [
 	},
 	{
 		time: '16:00–16:45',
-		title: 'Panel Discussion — The Future of AI in Irish Healthcare',
+		title: 'Panel Discussion: The Future of AI in Irish Healthcare',
 		kind: 'keynote',
 	},
 	{ time: '16:45–17:00', title: 'Closing Remarks', kind: 'plenary' },

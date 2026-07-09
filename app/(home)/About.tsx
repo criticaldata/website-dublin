@@ -45,7 +45,7 @@ export default function About() {
 				{/* Sub-hook */}
 				<p className="mt-8 text-xl sm:text-2xl font-medium text-white/75 tracking-tight leading-snug max-w-4xl">
 					Clinicians, researchers, healthcare professionals, patient advocates,
-					students, engineers and innovators — exploring the practical use of
+					students, engineers and innovators, exploring the practical use of
 					Large Language Models and generative AI in healthcare.
 				</p>
 

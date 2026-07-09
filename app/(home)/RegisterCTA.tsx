@@ -47,7 +47,7 @@ export default function RegisterCTA() {
 
 				<div className="mb-12 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2 text-sm text-teal-200/90">
 					<BellRing className="h-4 w-4" />
-					Places will be limited — don&rsquo;t miss out
+					Places will be limited, so don&rsquo;t miss out
 				</div>
 
 				{/* Primary CTA — opens mail app, with copy-to-clipboard fallback */}
@@ -56,8 +56,8 @@ export default function RegisterCTA() {
 				{/* Contact */}
 				<div className="mt-12 text-sm text-white/40 leading-relaxed">
 					<p>
-						General enquiries — registration, programme, speakers or
-						sponsorship — to the address above.
+						General enquiries for registration, programme, speakers or
+						sponsorship can go to the address above.
 					</p>
 				</div>
 			</div>
