@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"title": "Secondary Analysis of Electronic Health Records",
+		"description": "This is the first book published that describes the process of curating, exploring and analyzing messy electronic health record data. Like a cookbook, it comes with SQL and R codes and queries to demonstrate each step using the publicly available Medical Information Mart for Intensive Care (MIMIC), a database of patients admitted to the intensive care units of the Beth Israel Deaconess Medical Center. The open-access book has been downloaded close to 1.7 million times since its publication in 2016, and has been translated to Spanish, Mandarin, Portuguese and Korean.",
+		"link": "https://link.springer.com/book/10.1007/978-3-319-43742-2",
+		"category": "Book",
+		"created_at": "2016-01-01"
+	},
+	{
+		"id": "2",
+		"title": "MIMIC-III Database",
+		"description": "MIMIC-III, a freely accessible critical care database. This paper is a description of the MIMIC-III dataset. It has been cited more than 5000 times since its publication in 2016. The database contains de-identified health data associated with over 40,000 patients who stayed in critical care units of the Beth Israel Deaconess Medical Center between 2001 and 2012.",
+		"link": "https://www.nature.com/articles/sdata201635",
+		"category": "Database",
+		"created_at": "2016-05-24"
+	},
+	{
+		"id": "3",
+		"title": "MIT Laboratory for Computational Physiology",
+		"description": "Visit the MIT Laboratory for Computational Physiology website to learn more about our mission, team, and ongoing research projects in healthcare AI and computational physiology.",
+		"link": "https://lcp.mit.edu/",
+		"category": "Website",
+		"created_at": "2023-01-01"
+	}
+]

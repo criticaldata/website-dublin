@@ -1,0 +1,509 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-71.12278, 42.377755]
+			},
+			"properties": {
+				"cartodb_id": 1,
+				"field_1": "Cambridge",
+				"state": "MA",
+				"country": "U.S.A.",
+				"latitude": 42.37775498,
+				"longitude": -71.12278029,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-81.385239, 28.525808]
+			},
+			"properties": {
+				"cartodb_id": 2,
+				"field_1": "Orlando",
+				"state": "FL",
+				"country": "U.S.A.",
+				"latitude": 28.52580804,
+				"longitude": -81.38523932,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-0.153103, 51.513605]
+			},
+			"properties": {
+				"cartodb_id": 17,
+				"field_1": "London",
+				"state": "",
+				"country": "U.K.",
+				"latitude": 51.51360453,
+				"longitude": -0.1531032364,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-79.388365, 43.735027]
+			},
+			"properties": {
+				"cartodb_id": 3,
+				"field_1": "Toronto",
+				"state": "",
+				"country": "Canada",
+				"latitude": 43.73502654,
+				"longitude": -79.3883648,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-75.57332, 6.251195]
+			},
+			"properties": {
+				"cartodb_id": 4,
+				"field_1": "Medellin",
+				"state": "",
+				"country": "Colombia",
+				"latitude": 6.251194912,
+				"longitude": -75.57331995,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [2.34772, 48.860415]
+			},
+			"properties": {
+				"cartodb_id": 18,
+				"field_1": "Paris",
+				"state": "",
+				"country": "France",
+				"latitude": 48.86041476,
+				"longitude": 2.347720007,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-46.588465, -23.550041]
+			},
+			"properties": {
+				"cartodb_id": 5,
+				"field_1": "Sao Paulo",
+				"state": "",
+				"country": "Brazil",
+				"latitude": -23.55004117,
+				"longitude": -46.58846513,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.522704, 25.055225]
+			},
+			"properties": {
+				"cartodb_id": 6,
+				"field_1": "Taipei",
+				"state": "",
+				"country": "Taiwan",
+				"latitude": 25.05522482,
+				"longitude": 121.5227036,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-3.687097, 40.41278]
+			},
+			"properties": {
+				"cartodb_id": 19,
+				"field_1": "Madrid",
+				"state": "",
+				"country": "Spain",
+				"latitude": 40.41277969,
+				"longitude": -3.687097152,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [139.626864, 35.670993]
+			},
+			"properties": {
+				"cartodb_id": 7,
+				"field_1": "Tokyo",
+				"state": "",
+				"country": "Japan",
+				"latitude": 35.6709932,
+				"longitude": 139.6268643,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [126.978885, 37.568128]
+			},
+			"properties": {
+				"cartodb_id": 8,
+				"field_1": "Seoul",
+				"state": "",
+				"country": "Korea",
+				"latitude": 37.56812753,
+				"longitude": 126.9788851,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [1.24236, 41.120178]
+			},
+			"properties": {
+				"cartodb_id": 20,
+				"field_1": "Tarragona",
+				"state": "",
+				"country": "Spain",
+				"latitude": 41.12017838,
+				"longitude": 1.242359884,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [116.36447, 39.913271]
+			},
+			"properties": {
+				"cartodb_id": 9,
+				"field_1": "Beijing",
+				"state": "",
+				"country": "China",
+				"latitude": 39.91327124,
+				"longitude": 116.3644703,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [103.860034, 1.342141]
+			},
+			"properties": {
+				"cartodb_id": 10,
+				"field_1": "Singapore",
+				"state": "",
+				"country": "Singapore",
+				"latitude": 1.342141049,
+				"longitude": 103.8600337,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [9.197288, 45.478053]
+			},
+			"properties": {
+				"cartodb_id": 21,
+				"field_1": "Milan",
+				"state": "",
+				"country": "Italy",
+				"latitude": 45.47805294,
+				"longitude": 9.197287763,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [153.093416, -27.562191]
+			},
+			"properties": {
+				"cartodb_id": 12,
+				"field_1": "Brisbane",
+				"state": "",
+				"country": "Australia",
+				"latitude": -27.56219109,
+				"longitude": 153.0934157,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [10.181286, 56.160881]
+			},
+			"properties": {
+				"cartodb_id": 22,
+				"field_1": "Aarhus",
+				"state": "",
+				"country": "Denmark",
+				"latitude": 56.16088148,
+				"longitude": 10.18128639,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [145.064095, -37.850885]
+			},
+			"properties": {
+				"cartodb_id": 13,
+				"field_1": "Melbourne",
+				"state": "",
+				"country": "Australia",
+				"latitude": -37.85088538,
+				"longitude": 145.0640953,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [151.093995, -33.845646]
+			},
+			"properties": {
+				"cartodb_id": 14,
+				"field_1": "Sydney",
+				"state": "",
+				"country": "Australia",
+				"latitude": -33.84564587,
+				"longitude": 151.0939948,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [5.362705, 60.373903]
+			},
+			"properties": {
+				"cartodb_id": 23,
+				"field_1": "Bergen",
+				"state": "",
+				"country": "Norway",
+				"latitude": 60.37390309,
+				"longitude": 5.362705384,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [115.803578, -31.983861]
+			},
+			"properties": {
+				"cartodb_id": 15,
+				"field_1": "Perth",
+				"state": "",
+				"country": "Australia",
+				"latitude": -31.98386142,
+				"longitude": 115.8035781,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [174.774779, -36.891587]
+			},
+			"properties": {
+				"cartodb_id": 16,
+				"field_1": "Auckland",
+				"state": "",
+				"country": "New Zealand",
+				"latitude": -36.8915866,
+				"longitude": 174.7747789,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-71.61371, -71.61371]
+			},
+			"properties": {
+				"cartodb_id": 25,
+				"field_1": "Valparaiso",
+				"state": null,
+				"country": "Chile",
+				"latitude": -33.0482550072262,
+				"longitude": -71.6137097470087,
+				"startdate": "2023-01-11T16:00:38Z",
+				"pastevent": null,
+				"enddate": "2023-01-13T16:00:49Z"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [103.819836, 1.352083]
+			},
+			"properties": {
+				"cartodb_id": 24,
+				"field_1": "Singapore",
+				"state": null,
+				"country": "Singapore",
+				"latitude": 1.352083,
+				"longitude": 103.819836,
+				"startdate": "2022-12-01T15:54:50Z",
+				"pastevent": null,
+				"enddate": "2022-12-04T15:58:21Z"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [34.798445, 32.083118]
+			},
+			"properties": {
+				"cartodb_id": 31,
+				"field_1": "Tel Aviv",
+				"state": null,
+				"country": "Israel",
+				"latitude": 32.0831182545108,
+				"longitude": 34.7984453840834,
+				"startdate": null,
+				"pastevent": null,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [120.984538, 14.598741]
+			},
+			"properties": {
+				"cartodb_id": 26,
+				"field_1": "Manila",
+				"state": null,
+				"country": "Philippines",
+				"latitude": 14.5987408805692,
+				"longitude": 120.98453803,
+				"startdate": null,
+				"pastevent": null,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [100.552077, 13.759911]
+			},
+			"properties": {
+				"cartodb_id": 11,
+				"field_1": "Khon Kaen",
+				"state": "",
+				"country": "Thailand",
+				"latitude": 13.75991056,
+				"longitude": 100.5520775,
+				"startdate": null,
+				"pastevent": true,
+				"enddate": null
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-84.385141, 33.741596]
+			},
+			"properties": {
+				"cartodb_id": 30,
+				"field_1": "Atlanta",
+				"state": null,
+				"country": "U.S.A.",
+				"latitude": 33.7415962561788,
+				"longitude": -84.3851413832729,
+				"startdate": null,
+				"pastevent": null,
+				"enddate": null
+			}
+		}
+	]
+}

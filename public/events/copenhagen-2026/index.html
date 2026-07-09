@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI as a Catalyst Copenhagen</title>
+    <meta
+      name="description"
+      content="A one-day Copenhagen gathering on AI, healthcare, patient voices, relational accountability, and community-led evaluation. August 14, 2026 at TUH Skylab at Rigshospitalet."
+    >
+    <meta property="og:title" content="AI as a Catalyst Copenhagen">
+    <meta
+      property="og:description"
+      content="Reimagining health innovation beyond techno-solutionism. August 14, 2026 at TUH Skylab at Rigshospitalet in Copenhagen."
+    >
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="particle-field" aria-hidden="true">
+      <canvas id="particle-canvas"></canvas>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MIT Critical Data">
+        <img class="brand-logo" src="assets/logo-mit-white.svg" alt="MIT">
+        <span class="brand-text"><span>Critical</span><span>Data</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#program">Program</a>
+        <a href="#people">People</a>
+        <a href="#apply">Apply</a>
+      </nav>
+      <div class="nav-spacer" aria-hidden="true"></div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-top" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-bottom" aria-hidden="true"></div>
+        <svg class="copenhagen-lineart" viewBox="0 0 760 360" aria-hidden="true">
+          <g class="lineart-soft">
+            <path d="M34 287c72-18 121-18 185 0 69 20 129 18 202-4 88-26 167-20 284 21"></path>
+            <path d="M70 313c56-12 96-10 151 6 67 20 130 18 203-4 88-27 163-20 264 19"></path>
+          </g>
+          <g class="lineart-main">
+            <path d="M94 244V141l46-35 46 35v103"></path>
+            <path d="M116 244v-62h48v62"></path>
+            <path d="M218 244V126h76v118"></path>
+            <path d="M218 126l38-42 38 42"></path>
+            <path d="M243 244v-48h28v48"></path>
+            <path d="M326 244V152h72v92"></path>
+            <path d="M326 152l36-32 36 32"></path>
+            <path d="M431 244V106h70v138"></path>
+            <path d="M466 106V63"></path>
+            <path d="M452 79h28"></path>
+            <path d="M548 244V134h74v110"></path>
+            <path d="M548 134l37-48 37 48"></path>
+            <path d="M655 244V158h46v86"></path>
+            <path d="M678 158V70"></path>
+            <path d="M663 88l15-18 15 18"></path>
+          </g>
+          <g class="lineart-detail">
+            <path d="M238 153h16m22 0h16M238 178h16m22 0h16"></path>
+            <path d="M346 178h16m18 0h16M346 203h16m18 0h16"></path>
+            <path d="M449 136h13m23 0h13M449 166h13m23 0h13M449 196h13m23 0h13"></path>
+            <path d="M568 165h14m20 0h14M568 194h14m20 0h14"></path>
+            <path d="M74 244h650"></path>
+            <circle cx="572" cy="298" r="22"></circle>
+            <circle cx="648" cy="298" r="22"></circle>
+            <path d="M572 298l31-42 45 42h-76l32-1 18-33"></path>
+            <path d="M603 256h30m-12 0 8-16m-39 16-12-15"></path>
+          </g>
+        </svg>
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span>MIT Critical Data presents</div>
+          <h1>
+            <span>AI as a</span>
+            <span>Catalyst</span>
+            <em>Copenhagen</em>
+          </h1>
+          <p class="hero-kicker">Reimagining Health Innovation</p>
+          <p class="hero-subtitle">
+            Copenhagen gathering on AI, healthcare, patient voices, and community-led
+            evaluation.
+          </p>
+          <div class="hero-meta" aria-label="Event details">
+            <span><i></i>August 14, 2026</span>
+            <span>TUH Skylab at Rigshospitalet, Copenhagen</span>
+            <strong>Free to attend</strong>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="https://forms.gle/NFdXALiYSm9tpZNf7">
+              <span>Apply to Attend</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+            <a class="learn-link" href="#about">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 5v14"></path>
+                <path d="m19 12-7 7-7-7"></path>
+              </svg>
+              Learn more about the gathering
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="section-label">A convening</div>
+        <h2>
+          A room for patients, clinicians, engineers, researchers, designers, and community
+          builders to rethink what healthcare AI is for.
+        </h2>
+        <div class="split">
+          <p class="lead">
+            AI as a Catalyst Copenhagen is a one-day gathering for people willing to push
+            past the easy story that new technology will automatically repair healthcare.
+            The event centers patient voices as co-designers and asks participants to work
+            upstream from symptoms toward root causes.
+          </p>
+          <div class="copy-stack">
+            <p>
+              The format is built around conversation, hands-on workshops, and critical
+              evaluation. Instead of racing toward an MVP, teams will examine assumptions,
+              harms, guardrails, accountability, and the social conditions that shape health.
+            </p>
+            <p>
+              The goal is not a one-off event. It is to grow a Copenhagen community that keeps
+              working on projects, workshops, and public conversations after August.
+            </p>
+          </div>
+        </div>
+        <div class="host-grid" aria-label="Hosts and partners">
+          <div>
+            <span>Hosted with</span>
+            <strong>Copenhagen MedTech</strong>
+          </div>
+          <div>
+            <span>In collaboration with</span>
+            <strong>MIT Critical Data</strong>
+          </div>
+          <div>
+            <span>Collaborating organisation</span>
+            <strong>TUH</strong>
+            <p>
+              The Technical University Hospital of Greater Copenhagen · partnership between
+              RegionH and DTU
+            </p>
+          </div>
+          <div>
+            <span>Venue</span>
+            <strong>TUH Skylab at Rigshospitalet</strong>
+          </div>
+          <div class="host-logo-card">
+            <span>Supported by</span>
+            <img
+              class="partner-logo"
+              src="assets/PLOS_DH_logo_transparent.png"
+              alt="PLOS Digital Health"
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section theme-section">
+        <div class="section-label">What we will challenge</div>
+        <div class="theme-grid">
+          <article>
+            <span>01</span>
+            <h3>Techno-solutionism</h3>
+            <p>
+              We will question the assumption that more gadgets, models, agents, or dashboards
+              will automatically fix fragmented systems.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Techno-chauvinism</h3>
+            <p>
+              We will test the belief that technology-based answers are superior to people-based,
+              relationship-based, and community-led solutions.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Accountability gaps</h3>
+            <p>
+              We will explore relational accountability: the shared guardrails communities build
+              when law, procurement, and institutions cannot keep pace.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="program" class="section program">
+        <div class="section-label">The program</div>
+        <div class="program-header">
+          <h2>One formal day, followed by an optional Copenhagen social.</h2>
+          <p>
+            The schedule below is a working structure based on the planning call. Session names
+            and timing can be refined as workshop materials are selected.
+          </p>
+        </div>
+        <div class="day-grid">
+          <article class="day-card">
+            <div class="day-topline">Main event</div>
+            <h3>Friday, August 14</h3>
+            <p class="venue">TUH Skylab at Rigshospitalet · Copenhagen</p>
+            <ol class="timeline">
+              <li>
+                <time>09:30</time>
+                <span>Arrival, coffee, and community introductions</span>
+              </li>
+              <li>
+                <time>10:15</time>
+                <span>Opening: from techno-solutionism to relational accountability</span>
+              </li>
+              <li>
+                <time>11:00</time>
+                <span>Patient voices as co-designers, not guests of honor</span>
+              </li>
+              <li>
+                <time>13:00</time>
+                <span>Workshop: are we solving a problem or a symptom?</span>
+              </li>
+              <li>
+                <time>14:15</time>
+                <span>LLM-athon: community-led evaluation across language and context</span>
+              </li>
+              <li>
+                <time>16:00</time>
+                <span>HASTC: Health AI Systems Thinking for Community</span>
+              </li>
+              <li>
+                <time>17:15</time>
+                <span>Closing circle: guardrails, commitments, and next steps</span>
+              </li>
+            </ol>
+          </article>
+          <article class="day-card social-card">
+            <div class="day-topline">Informal continuation</div>
+            <h3>Saturday, August 15</h3>
+            <p class="venue">Copenhagen route to be announced</p>
+            <p>
+              Participants and mentors are invited to continue the conversation in the city.
+              The intent is a relaxed, low-structure walk, meal, or cultural stop where people
+              can ask harder questions and build relationships beyond the workshop room.
+            </p>
+            <div class="small-note">Optional · no formal presentations · open to attendees</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workshops">
+        <div class="section-label">Featured workshops</div>
+        <div class="workshop-grid">
+          <article>
+            <h3>LLM-athon</h3>
+            <p>
+              Participants compare model responses across prompts, languages, and cultural
+              contexts, then discuss who should evaluate healthcare AI and what communities
+              need to see before trusting it.
+            </p>
+          </article>
+          <article>
+            <h3>HASTC</h3>
+            <p>
+              Health AI Systems Thinking for Community uses recent papers as starting points
+              for imagining failure modes, abuse cases, guardrails, and shared accountability.
+            </p>
+          </article>
+          <article>
+            <h3>Root cause clinic</h3>
+            <p>
+              Teams work backwards from visible pain points to the social, institutional, and
+              economic drivers that make many technical fixes too shallow to last.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="people" class="section people">
+        <div class="section-label">Organizers and mentors</div>
+        <h2>People shaping the Copenhagen gathering.</h2>
+        <div class="people-grid">
+          <article class="person-card">
+            <img src="assets/Leo%20Anthony%20Celi.jpg" alt="Leo Anthony Celi">
+            <h3>Leo Anthony Celi</h3>
+            <p>MIT Critical Data · Harvard Medical School</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Boya%20Zhang.jpeg" alt="Boya Zhang">
+            <h3>Boya Zhang</h3>
+            <p>University of Geneva, MIT Critical Data · Clinical AI research</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Hannes%20Ill.png" alt="Hannes Ill">
+            <h3>Hannes Ill</h3>
+            <p>MIT Critical Data · Clinical AI research</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Dimitrios%20Proios.jpeg" alt="Dimitrios Proios">
+            <h3>Dimitrios Proios</h3>
+            <p>University of Geneva · clinical data science and GNNs</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Giulia%20Modena.jpeg" alt="Giulia Modena">
+            <h3>Giulia Modena</h3>
+            <p>DTU &amp; KU · biomedical engineering and MedTech</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Guglielmo%20Abete.png" alt="Guglielmo Abete">
+            <h3>Guglielmo Abete</h3>
+            <p>DTU · imaging and medical device development</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Laurine%20Sprehe.jpeg" alt="Laurine Sprehe">
+            <h3>Laurine Sprehe</h3>
+            <p>MGH/HMS · cardiology and medical education</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Marco%20Russano.jpg" alt="Marco Russano">
+            <h3>Marco Russano</h3>
+            <p>DTU · M.Sc. in biomedical engineering</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Mei%20Li%20Luisa%20Cham%20Perez.jpeg" alt="Mei Li Luisa Cham Perez">
+            <h3>Mei Li Luisa Cham Perez</h3>
+            <p>DTU · AI in healthcare and 3D disease models</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Omar%20Gonzalez%20Hinojosa.jpeg" alt="Omar González Hinojosa">
+            <h3>Omar González Hinojosa</h3>
+            <p>DTU · biosignals and Human-Centered AI</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/Ravi%20Sonthalia.jpeg" alt="Ravi Sonthalia">
+            <h3>Ravi Sonthalia</h3>
+            <p>CBS · healthcare innovation and administration</p>
+          </article>
+          <article class="person-card">
+            <img src="assets/annette-villasenor-medina.jpeg" alt="Annette Villaseñor Medina">
+            <h3>Annette Villaseñor Medina</h3>
+            <p>CBS · healthcare innovation, administration, and MedTech</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="apply" class="section apply">
+        <div class="apply-inner">
+          <div>
+            <div class="section-label">Apply</div>
+            <h2>Join a small, interdisciplinary room.</h2>
+            <p>
+              Capacity is intentionally limited so participants can work closely with mentors
+              and each other. The event is free to attend; food and refreshments are planned.
+            </p>
+          </div>
+          <div class="apply-card">
+            <span>Applications open</span>
+            <p>
+              Use the application form to share your interest in joining the Copenhagen
+              gathering.
+            </p>
+            <a class="button primary" href="https://forms.gle/NFdXALiYSm9tpZNf7">
+              <span>Apply</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="floating-cta" href="https://forms.gle/NFdXALiYSm9tpZNf7" aria-label="Apply to attend">
+      <span class="ping"></span>
+      <span>Apply to Attend</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
+    </a>
+
+    <footer class="footer">
+      <p>AI as a Catalyst Copenhagen · August 14, 2026 · TUH Skylab at Rigshospitalet</p>
+      <a href="#top">Back to top</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
