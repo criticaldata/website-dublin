@@ -6,6 +6,7 @@ import {
 	ShieldCheck,
 	Users,
 	Laptop,
+	Server,
 } from 'lucide-react';
 
 const themes = [
@@ -71,10 +72,22 @@ export default function Workshop() {
 					cognitive bias, governance, ethics and safe implementation.
 				</p>
 
-				<div className="mb-14 inline-flex items-center gap-2.5 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2.5 text-sm text-teal-200/90">
-					<Laptop className="h-4 w-4 shrink-0" />
-					Participants are recommended to bring their own laptops for the
-					hands-on activities.
+				<div className="mb-14 flex flex-col items-start gap-3">
+					<div className="inline-flex items-center gap-2.5 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2.5 text-sm text-teal-200/90">
+						<Server className="h-4 w-4 shrink-0" />
+						<span>
+							During the event, MedWrite.ai will provide participants with
+							access to leading AI models, including OpenAI&rsquo;s, running on
+							servers hosted in Europe.
+						</span>
+					</div>
+					<div className="inline-flex items-center gap-2.5 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2.5 text-sm text-teal-200/90">
+						<Laptop className="h-4 w-4 shrink-0" />
+						<span>
+							Participants are recommended to bring their own laptops for the
+							hands-on activities.
+						</span>
+					</div>
 				</div>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
