@@ -1,7 +1,8 @@
-import { BellRing } from 'lucide-react';
-import CopyEmailButton from '@/components/elements/CopyEmailButton';
+import { BellRing, ArrowUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const CONTACT_EMAIL = 'dublink.llmathon@gmail.com';
+const REGISTER_URL = 'https://medwrite.ai/dublink-event';
 
 export default function RegisterCTA() {
 	return (
@@ -41,8 +42,8 @@ export default function RegisterCTA() {
 				</h2>
 
 				<p className="text-lg sm:text-xl text-white/55 mb-6 max-w-2xl mx-auto leading-relaxed">
-					Registration details will be announced shortly. Register your
-					interest by email and we&rsquo;ll let you know the moment it opens.
+					Register your interest now and we&rsquo;ll keep you posted on the
+					programme in the run-up to the event.
 				</p>
 
 				<div className="mb-12 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2 text-sm text-teal-200/90">
@@ -50,14 +51,29 @@ export default function RegisterCTA() {
 					Places will be limited, so don&rsquo;t miss out
 				</div>
 
-				{/* Primary CTA — opens mail app, with copy-to-clipboard fallback */}
-				<CopyEmailButton email={CONTACT_EMAIL} />
+				{/* Primary CTA — registration form */}
+				<div className="flex justify-center">
+					<a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
+						<Button className="relative h-16 rounded-full px-12 text-lg font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/40 transition-all duration-300 hover:shadow-teal-900/40 hover:-translate-y-0.5 group overflow-hidden">
+							<span className="relative flex items-center">
+								Register Your Interest
+								<ArrowUpRight className="ml-3 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
+							</span>
+						</Button>
+					</a>
+				</div>
 
 				{/* Contact */}
 				<div className="mt-12 text-sm text-white/40 leading-relaxed">
 					<p>
 						General enquiries for registration, programme, speakers or
-						sponsorship can go to the address above.
+						sponsorship:{' '}
+						<a
+							href={`mailto:${CONTACT_EMAIL}`}
+							className="font-mono text-teal-300/80 hover:text-teal-200 transition-colors"
+						>
+							{CONTACT_EMAIL}
+						</a>
 					</p>
 				</div>
 			</div>
