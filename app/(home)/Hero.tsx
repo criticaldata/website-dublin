@@ -140,16 +140,21 @@ export default function Hero() {
 							className="mt-14 lg:pl-[8%] flex flex-col sm:flex-row items-start sm:items-center gap-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
 							style={{ animationDelay: '700ms', animationFillMode: 'both' }}
 						>
-							{/* Intentionally inert — registration opens later */}
-							<Button
-								type="button"
-								className="relative h-14 rounded-full px-8 text-base font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/30 transition-all duration-300 hover:shadow-teal-900/30 hover:-translate-y-0.5 group overflow-hidden"
+							<a
+								href="https://medwrite.ai/dublink-event"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								<span className="relative flex items-center">
-									Register Your Interest
-									<ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-								</span>
-							</Button>
+								<Button
+									type="button"
+									className="relative h-14 rounded-full px-8 text-base font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/30 transition-all duration-300 hover:shadow-teal-900/30 hover:-translate-y-0.5 group overflow-hidden"
+								>
+									<span className="relative flex items-center">
+										Register Your Interest
+										<ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+									</span>
+								</Button>
+							</a>
 
 							<Link
 								href="#about"
