@@ -5,7 +5,6 @@ const partners: {
 	logo: string;
 	width: number;
 	height: number;
-	wordmark?: string;
 }[] = [
 	{
 		name: 'Tallaght University Hospital',
@@ -26,13 +25,18 @@ const partners: {
 		height: 182,
 	},
 	{
-		name: 'MIT Critical Data',
+		name: 'MIT',
 		logo: '/logo-mit.svg',
-		width: 200,
-		height: 105,
-		// The MIT SVG is only the bars mark — the org's identity includes the
-		// wordmark, so render it as text beneath the logo
-		wordmark: 'MIT CRITICAL DATA',
+		// Oversized intrinsic dims so the max-h cap, not the SVG's natural
+		// size, decides how big the mark renders
+		width: 300,
+		height: 158,
+	},
+	{
+		name: 'MIT Critical Data',
+		logo: '/dublin/partners/mit-critical-data.png',
+		width: 497,
+		height: 237,
 	},
 	{
 		name: 'PLOS Digital Health',
@@ -82,13 +86,8 @@ export default function Partners() {
 								alt={partner.name}
 								width={partner.width}
 								height={partner.height}
-								className={`h-auto w-auto max-w-full object-contain ${partner.wordmark ? 'max-h-16 sm:max-h-20' : 'max-h-24 sm:max-h-28'}`}
+								className="h-auto w-auto max-w-full max-h-24 sm:max-h-28 object-contain"
 							/>
-							{partner.wordmark && (
-								<span className="text-sm sm:text-base font-bold tracking-[0.18em] text-gray-800">
-									{partner.wordmark}
-								</span>
-							)}
 						</div>
 					))}
 				</div>

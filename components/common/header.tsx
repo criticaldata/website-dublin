@@ -91,18 +91,9 @@ export default function Header({ children }: { children?: React.ReactNode }) {
 				</DropdownMenu>
 			</div>
 
-			{/* Register CTA — desktop */}
-			<div className="hidden md:flex w-auto ml-2 justify-end">
-				<Link href="/#register">
-					<Button
-						size="sm"
-						className="rounded-full px-5 font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white"
-					>
-						Register
-					</Button>
-				</Link>
-				{children}
-			</div>
+			{children && (
+				<div className="hidden md:flex w-auto ml-2 justify-end">{children}</div>
+			)}
 		</nav>
 	);
 }
