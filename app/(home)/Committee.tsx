@@ -48,7 +48,9 @@ const committee: {
 	{
 		name: 'Dr Muhammad Ali',
 		title: 'Workshop & Scientific Content Lead',
-		photo: null,
+		photo: '/dublin/team/muhammad-ali.jpg',
+		// Face sits in the lower half of the frame
+		photoPosition: 'object-[center_68%]',
 		initials: 'MA',
 		role: 'Researcher and educator in artificial intelligence and digital health. Leads the design of the day’s workshops and scientific content, shaping the clinical scenarios participants will work through.',
 	},
