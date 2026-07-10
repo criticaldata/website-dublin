@@ -3,6 +3,14 @@ import PhotoGallery from '@/components/elements/PhotoGallery';
 const photos = [
 	{ src: '/dublin/photos/datathon-2015.jpg', alt: 'MIT Critical Data datathon, 2015' },
 	{ src: '/dublin/photos/group-2017.jpg', alt: 'MIT Critical Data HST.953 group, 2017' },
+	{
+		src: '/dublin/photos/marrakesh-um6p.jpg',
+		alt: 'Datathon participants at UM6P, Marrakesh',
+	},
+	{
+		src: '/dublin/photos/marrakesh-um6p-campus.jpg',
+		alt: 'Datathon group on the UM6P campus, Marrakesh',
+	},
 ];
 
 export default function About() {

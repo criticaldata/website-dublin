@@ -36,9 +36,9 @@ const partners: {
 	},
 	{
 		name: 'PLOS Digital Health',
-		logo: '/dublin/partners/plos-digital-health.png',
-		width: 400,
-		height: 150,
+		logo: '/dublin/partners/plos-digital-health.jpg',
+		width: 749,
+		height: 250,
 	},
 ];
 
