@@ -73,13 +73,20 @@ export default function Workshop() {
 				</p>
 
 				<div className="mb-14 flex flex-col items-start gap-3">
-					<div className="inline-flex items-center gap-2.5 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2.5 text-sm text-teal-200/90">
-						<Server className="h-4 w-4 shrink-0" />
-						<span>
-							During the event, MedWrite.ai will provide participants with
-							access to leading AI models, including OpenAI&rsquo;s, running on
-							servers hosted in Europe.
+					<div className="relative overflow-hidden rounded-2xl border border-teal-400/30 bg-gradient-to-r from-teal-400/[0.12] via-emerald-400/[0.06] to-transparent px-5 sm:px-6 py-4 flex items-center gap-4 max-w-3xl">
+						<span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-400/15 ring-1 ring-teal-400/40 text-teal-300">
+							<Server className="h-5 w-5" />
 						</span>
+						<p className="text-sm sm:text-base text-teal-100/90 leading-relaxed">
+							During the event,{' '}
+							<span className="font-semibold text-white">MedWrite.ai</span>{' '}
+							will provide participants with access to leading AI models,
+							including{' '}
+							<span className="font-semibold text-white">
+								OpenAI&rsquo;s and Anthropic&rsquo;s
+							</span>
+							, running on servers hosted in Europe.
+						</p>
 					</div>
 					<div className="inline-flex items-center gap-2.5 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2.5 text-sm text-teal-200/90">
 						<Laptop className="h-4 w-4 shrink-0" />
