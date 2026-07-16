@@ -20,7 +20,7 @@ const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 export const metadata: Metadata = {
 	title: 'DubLINK AI in Healthcare LLM-athon, Dublin',
 	description:
-		'A one-day interactive LLM-athon exploring generative AI in healthcare. Saturday, 19 September 2026 at Tallaght University Hospital, Dublin, Ireland.',
+		'A one-day interactive LLM-athon exploring generative AI in healthcare. Saturday, 19 September 2026 Dublin, Ireland.',
 	openGraph: {
 		title: 'DubLINK AI in Healthcare LLM-athon',
 		description:

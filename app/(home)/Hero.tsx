@@ -131,7 +131,7 @@ export default function Hero() {
 							</div>
 							<span className="hidden sm:inline h-4 w-px bg-white/20" />
 							<span className="text-sm text-white/85 font-medium tracking-wide">
-								Tallaght University Hospital, Dublin, Ireland
+								 Dublin, Ireland
 							</span>
 						</div>
 

@@ -6,10 +6,10 @@ const DIRECTIONS_URL =
 	'https://www.tuh.ie/Departments/Centre-for-Learning-Development/Map-Directions.html';
 
 const MAP_EMBED_URL =
-	'https://maps.google.com/maps?q=Tallaght%20University%20Hospital%2C%20Dublin%2C%20Ireland&z=15&hl=en&output=embed';
+	'https://maps.google.com/maps?q=20Dublin%2C%20Ireland&z=15&hl=en&output=embed';
 
 const GOOGLE_MAPS_URL =
-	'https://www.google.com/maps/dir/?api=1&destination=Tallaght+University+Hospital,+Dublin,+Ireland';
+	'https://www.google.com/maps/dir/?api=1&destination=,+Dublin,+Ireland';
 
 export default function Venue() {
 	return (
@@ -40,7 +40,7 @@ export default function Venue() {
 					<div className="relative rounded-3xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl shadow-teal-900/20">
 						<LazyIframe
 							url={MAP_EMBED_URL}
-							title="Map of Tallaght University Hospital, Dublin"
+							title="Map of Dublin"
 							className="aspect-[4/3] w-full"
 						/>
 						<a
@@ -64,8 +64,7 @@ export default function Venue() {
 										The Venue
 									</h3>
 									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										Centre for Learning and Development, Tallaght University
-										Hospital, Dublin 24.
+										Dublin City
 									</p>
 								</div>
 							</div>
@@ -79,11 +78,7 @@ export default function Venue() {
 										From the City Centre: Luas Red Line
 									</h3>
 									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										Board any Tallaght-bound Red Line tram in the city centre
-										(stops include Abbey Street, Jervis and Heuston) and ride
-										to the final stop, <strong className="text-white/80">Tallaght</strong>,
-										about 40&ndash;50 minutes. The hospital is approximately
-										a five-minute walk from the stop.
+										
 									</p>
 								</div>
 							</div>
@@ -97,9 +92,7 @@ export default function Venue() {
 										By Car
 									</h3>
 									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										Roughly 30 minutes from the city centre via the N81 or M50
-										(Junction 11). Public parking is available on the hospital
-										campus.
+										
 									</p>
 								</div>
 							</div>
