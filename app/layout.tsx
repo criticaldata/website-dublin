@@ -16,7 +16,7 @@ export const metadata = {
 	metadataBase: new URL('https://criticaldata.github.io/website-dublin'),
 	title: 'DubLINK AI in Healthcare LLM-athon',
 	description:
-		'A one-day interactive educational event exploring Large Language Models and generative AI in healthcare. Saturday, 19 September 2026 at Tallaght University Hospital, Dublin, Ireland.',
+		'A one-day interactive educational event exploring Large Language Models and generative AI in healthcare. Saturday, 19 September 2026 in Dublin, Ireland.',
 	icons: {
 		icon: [
 			{ url: `${basePath}/favicon.ico`, sizes: 'any' },

@@ -3,8 +3,7 @@
 Website for the DubLINK AI in Healthcare LLM-athon: a one-day interactive
 educational event on Large Language Models and generative AI in healthcare.
 
-**Saturday, 19 September 2026 · Centre for Learning and Development, Tallaght
-University Hospital, Dublin, Ireland**
+**Saturday, 19 September 2026 · Dublin, Ireland**
 
 ## Getting Started
 
