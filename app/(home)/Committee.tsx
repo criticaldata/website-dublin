@@ -17,10 +17,10 @@ const committee: {
 	},
 	{
 		name: 'Mr Sebastian Cajas',
-		title: 'AI Researcher, MIT Critical Data',
+		title: 'Affiliate, MIT Critical Data',
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
-		role: 'AI researcher at MIT Critical Data, working at the intersection of human-AI systems and global health.',
+		role: 'Researcher and technologist working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Brings that perspective to the design and technical delivery of the day’s programme.',
 	},
 	{
 		name: 'Dr Ezi Ozoani',
@@ -36,7 +36,7 @@ const committee: {
 		// Portrait crop: keep the face centred in the circular avatar
 		photoPosition: 'object-[center_22%]',
 		initials: 'TT',
-		role: 'Consultant Intensivist and Quality & Audit Lead at Tallaght University Hospital, the host venue. Focused on AI, patient safety and human factors in clinical practice.',
+		role: 'Consultant Intensivist and Quality & Audit Lead at the host venue. Focused on AI, patient safety and human factors in clinical practice.',
 	},
 	{
 		name: 'Dr Daria Kalinska-Lysiak',
@@ -79,7 +79,7 @@ export default function Committee() {
 				</h2>
 				<p className="text-base sm:text-lg text-white/50 max-w-3xl mb-14">
 					DubLINK is organised by a multidisciplinary team of clinicians, AI
-					researchers and educators spanning Tallaght University Hospital, MIT
+					researchers and educators spanning the host venue, MIT
 					Critical Data, MedWrite.ai and the wider Irish and international
 					health AI community.
 				</p>

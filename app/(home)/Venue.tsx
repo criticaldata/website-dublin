@@ -1,15 +1,11 @@
-import Link from 'next/link';
-import { MapPin, TrainFront, Car, ExternalLink, Navigation } from 'lucide-react';
+import { MapPin, TrainFront, Car, Navigation } from 'lucide-react';
 import LazyIframe from '@/components/primitives/lazy-iframe';
 
-const DIRECTIONS_URL =
-	'https://www.tuh.ie/Departments/Centre-for-Learning-Development/Map-Directions.html';
-
 const MAP_EMBED_URL =
-	'https://maps.google.com/maps?q=20Dublin%2C%20Ireland&z=15&hl=en&output=embed';
+	'https://maps.google.com/maps?q=Dublin+City+Centre%2C+Ireland&z=14&hl=en&output=embed';
 
 const GOOGLE_MAPS_URL =
-	'https://www.google.com/maps/dir/?api=1&destination=,+Dublin,+Ireland';
+	'https://www.google.com/maps/dir/?api=1&destination=Dublin+City+Centre,+Ireland';
 
 export default function Venue() {
 	return (
@@ -97,16 +93,6 @@ export default function Venue() {
 								</div>
 							</div>
 						</div>
-
-						<Link
-							href={DIRECTIONS_URL}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-flex items-center gap-2 px-1 text-sm font-medium text-teal-300/90 hover:text-teal-200 transition-colors"
-						>
-							Official directions and campus map
-							<ExternalLink className="h-4 w-4" />
-						</Link>
 					</div>
 				</div>
 			</div>
