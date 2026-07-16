@@ -7,12 +7,6 @@ const partners: {
 	height: number;
 }[] = [
 	{
-		name: 'Tallaght University Hospital',
-		logo: '/dublin/partners/tallaght-university-hospital.png',
-		width: 351,
-		height: 143,
-	},
-	{
 		name: 'Royal College of Surgeons in Ireland',
 		logo: '/dublin/partners/rcsi.jpg',
 		width: 858,
