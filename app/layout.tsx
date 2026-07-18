@@ -18,12 +18,22 @@ export const metadata = {
 	description:
 		'A one-day interactive educational event exploring Large Language Models and generative AI in healthcare. Saturday, 19 September 2026 in Dublin, Ireland.',
 	icons: {
+		// ?v=2 busts the old (MIT-logo) favicon out of browser caches — favicons
+		// are cached per-URL, so a content change alone never shows up
 		icon: [
-			{ url: `${basePath}/favicon.ico`, sizes: 'any' },
-			{ url: `${basePath}/icon-192.png`, type: 'image/png', sizes: '192x192' },
-			{ url: `${basePath}/icon-512.png`, type: 'image/png', sizes: '512x512' },
+			{ url: `${basePath}/favicon.ico?v=2`, sizes: 'any' },
+			{
+				url: `${basePath}/icon-192.png?v=2`,
+				type: 'image/png',
+				sizes: '192x192',
+			},
+			{
+				url: `${basePath}/icon-512.png?v=2`,
+				type: 'image/png',
+				sizes: '512x512',
+			},
 		],
-		apple: `${basePath}/apple-touch-icon.png`,
+		apple: `${basePath}/apple-touch-icon.png?v=2`,
 	},
 };
 
