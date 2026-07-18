@@ -81,3 +81,273 @@ html {
 		scroll-behavior: auto;
 	}
 }
+
+/* --- Animated header logo ------------------------------------------------
+   The skyline mark "builds" itself bottom-to-top on load, and pigeons take
+   off from the rooftops — one ambient flyby every few seconds, a small
+   flock while hovering. Pure CSS so the logo stays a server component. */
+
+@keyframes logo-build {
+	from {
+		clip-path: inset(100% 0 0 0 round 9999px);
+	}
+	to {
+		clip-path: inset(0 0 0 0 round 9999px);
+	}
+}
+
+.logo-mark {
+	animation: logo-build 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.logo-badge {
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.logo-group:hover .logo-badge {
+	transform: scale(1.08) rotate(-4deg);
+	box-shadow: 0 0 18px rgba(45, 212, 191, 0.35);
+}
+
+.logo-pigeon {
+	position: absolute;
+	width: 12px;
+	height: 8px;
+	color: #e5e7eb;
+	opacity: 0;
+	pointer-events: none;
+	will-change: transform, opacity;
+}
+
+.logo-pigeon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	animation: pigeon-flap 0.3s ease-in-out infinite;
+}
+
+/* Wing beat: the gull-shaped path squashes vertically */
+@keyframes pigeon-flap {
+	0%,
+	100% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(0.3);
+	}
+}
+
+.logo-pigeon-1 {
+	bottom: 55%;
+	left: 42%;
+}
+.logo-pigeon-2 {
+	bottom: 42%;
+	left: 20%;
+	width: 10px;
+}
+.logo-pigeon-3 {
+	bottom: 60%;
+	left: 58%;
+	width: 9px;
+}
+
+@keyframes pigeon-flight-1 {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	12% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(26px, -26px) scale(1.05) rotate(14deg);
+	}
+}
+
+@keyframes pigeon-flight-2 {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	12% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-20px, -22px) scale(1) rotate(-12deg);
+	}
+}
+
+@keyframes pigeon-flight-3 {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	12% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(18px, -30px) scale(1) rotate(10deg);
+	}
+}
+
+/* Ambient: one pigeon crosses quickly, then the sky stays clear ~8s.
+   The flight lives in the first 14% of the cycle; the rest is hidden. */
+@keyframes pigeon-ambient {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	2% {
+		opacity: 1;
+	}
+	14% {
+		opacity: 0;
+		transform: translate(26px, -26px) scale(1.05) rotate(14deg);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(26px, -26px) scale(1.05) rotate(14deg);
+	}
+}
+
+.logo-pigeon-1 {
+	animation: pigeon-ambient 9s ease-out 2.5s infinite;
+}
+
+.logo-group:hover .logo-pigeon-1 {
+	animation: pigeon-flight-1 1.1s ease-out infinite;
+}
+.logo-group:hover .logo-pigeon-2 {
+	animation: pigeon-flight-2 1.3s ease-out 0.15s infinite;
+}
+.logo-group:hover .logo-pigeon-3 {
+	animation: pigeon-flight-3 1.2s ease-out 0.3s infinite;
+}
+
+/* Hero variant: same build + pigeons, scaled up for the big mark. The hero
+   logo has the skyline in its upper half, so pigeons launch from there. */
+@keyframes logo-build-square {
+	from {
+		clip-path: inset(100% 0 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+.logo-mark-hero {
+	animation: logo-build-square 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+.logo-pigeon-hero {
+	position: absolute;
+	width: 26px;
+	height: 17px;
+	color: #ccfbf1;
+	opacity: 0;
+	pointer-events: none;
+	will-change: transform, opacity;
+	filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.5));
+}
+
+.logo-pigeon-hero svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	animation: pigeon-flap 0.32s ease-in-out infinite;
+}
+
+.logo-pigeon-hero-1 {
+	top: 34%;
+	left: 44%;
+}
+.logo-pigeon-hero-2 {
+	top: 42%;
+	left: 24%;
+	width: 20px;
+}
+.logo-pigeon-hero-3 {
+	top: 30%;
+	left: 62%;
+	width: 17px;
+}
+
+@keyframes pigeon-flight-hero-1 {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(90px, -80px) scale(1.1) rotate(14deg);
+	}
+}
+
+@keyframes pigeon-flight-hero-2 {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-70px, -70px) scale(1) rotate(-12deg);
+	}
+}
+
+@keyframes pigeon-flight-hero-3 {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(60px, -100px) scale(1) rotate(10deg);
+	}
+}
+
+@keyframes pigeon-ambient-hero {
+	0% {
+		opacity: 0;
+		transform: translate(0, 0) scale(0.5) rotate(0deg);
+	}
+	2% {
+		opacity: 1;
+	}
+	16% {
+		opacity: 0;
+		transform: translate(90px, -80px) scale(1.1) rotate(14deg);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(90px, -80px) scale(1.1) rotate(14deg);
+	}
+}
+
+.logo-pigeon-hero-1 {
+	animation: pigeon-ambient-hero 11s ease-out 3s infinite;
+}
+
+.logo-group:hover .logo-pigeon-hero-1 {
+	animation: pigeon-flight-hero-1 1.6s ease-out infinite;
+}
+.logo-group:hover .logo-pigeon-hero-2 {
+	animation: pigeon-flight-hero-2 1.8s ease-out 0.2s infinite;
+}
+.logo-group:hover .logo-pigeon-hero-3 {
+	animation: pigeon-flight-hero-3 1.7s ease-out 0.4s infinite;
+}

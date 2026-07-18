@@ -7,24 +7,10 @@ const partners: {
 	height: number;
 }[] = [
 	{
-		name: 'Royal College of Surgeons in Ireland',
-		logo: '/dublin/partners/rcsi.jpg',
-		width: 858,
-		height: 463,
-	},
-	{
 		name: 'MedWrite.ai',
 		logo: '/dublin/partners/medwrite-ai.png',
 		width: 516,
 		height: 182,
-	},
-	{
-		name: 'MIT',
-		logo: '/logo-mit.svg',
-		// Oversized intrinsic dims so the max-h cap, not the SVG's natural
-		// size, decides how big the mark renders
-		width: 300,
-		height: 158,
 	},
 	{
 		name: 'MIT Critical Data',

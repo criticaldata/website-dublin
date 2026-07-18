@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRightIcon, ArrowDown } from 'lucide-react';
 import PhotoGallery from '@/components/elements/PhotoGallery';
 import RenderParticles from '@/components/primitives/particles';
+import { Pigeon } from '@/components/common/logo';
 
 const heroPhotos = [
 	{
@@ -172,7 +173,7 @@ export default function Hero() {
 						className="hidden lg:flex lg:col-span-4 lg:self-start justify-center pt-4 animate-in fade-in-0 zoom-in-95 duration-1000"
 						style={{ animationDelay: '400ms', animationFillMode: 'both' }}
 					>
-						<div className="relative">
+						<div className="logo-group relative">
 							<div
 								aria-hidden
 								className="absolute inset-0 scale-110 bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.25)_0%,_rgba(6,182,212,0.08)_45%,_transparent_70%)] blur-2xl"
@@ -183,8 +184,13 @@ export default function Hero() {
 								width={400}
 								height={358}
 								priority
-								className="relative h-auto w-full max-w-[340px] drop-shadow-[0_0_35px_rgba(20,184,166,0.2)]"
+								className="logo-mark-hero relative h-auto w-full max-w-[340px] drop-shadow-[0_0_35px_rgba(20,184,166,0.2)]"
 							/>
+							{/* Pigeons over the skyline: ambient flyby on a timer,
+							    full flock on hover (see globals.css) */}
+							<Pigeon className="logo-pigeon-hero logo-pigeon-hero-1" />
+							<Pigeon className="logo-pigeon-hero logo-pigeon-hero-2" />
+							<Pigeon className="logo-pigeon-hero logo-pigeon-hero-3" />
 						</div>
 					</div>
 				</div>

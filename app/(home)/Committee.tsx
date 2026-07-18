@@ -16,11 +16,11 @@ const committee: {
 		role: 'Advises on the clinical direction of the programme, drawing on years of datathons organised with MIT Critical Data around the world.',
 	},
 	{
-		name: 'Mr Sebastian Cajas',
-		title: 'Affiliate, MIT Critical Data',
+		name: 'Sebastián Cajas',
+		title: 'Workshop Lead',
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
-		role: 'Researcher and technologist working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Brings that perspective to the design and technical delivery of the day’s programme.',
+		role: 'Researcher and technologist working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Drives the vision behind DubLINK and brings that perspective to the design and technical delivery of the day’s programme.',
 	},
 	{
 		name: 'Dr Ezi Ozoani',
