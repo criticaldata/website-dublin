@@ -39,13 +39,6 @@ const committee: {
 		role: 'Consultant Intensivist and Quality & Audit Lead at the host venue. Focused on AI, patient safety and human factors in clinical practice.',
 	},
 	{
-		name: 'Dr Daria Kalinska-Lysiak',
-		title: 'Clinician & Data Scientist',
-		photo: '/dublin/team/daria-kalinska-lysiak.png',
-		initials: 'DK',
-		role: 'Clinician and data scientist, clinical educator and researcher. Brings a dual clinical–technical perspective, with interests in clinical innovation, simulation, and precision and personalised medicine.',
-	},
-	{
 		name: 'Dr Muhammad Ali',
 		title: 'Workshop & Scientific Content Lead',
 		photo: '/dublin/team/muhammad-ali.jpg',
