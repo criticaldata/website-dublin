@@ -2,10 +2,10 @@ import { MapPin, TrainFront, Car, Navigation } from 'lucide-react';
 import LazyIframe from '@/components/primitives/lazy-iframe';
 
 const MAP_EMBED_URL =
-	'https://maps.google.com/maps?q=Dublin+City+Centre%2C+Ireland&z=14&hl=en&output=embed';
+	'https://maps.google.com/maps?q=Workday+Dublin%2C+152-155+Church+St%2C+Smithfield%2C+Dublin+7%2C+D07+A0TN&z=16&hl=en&output=embed';
 
 const GOOGLE_MAPS_URL =
-	'https://www.google.com/maps/dir/?api=1&destination=Dublin+City+Centre,+Ireland';
+	'https://www.google.com/maps/place/Workday+-+Dublin/@53.3477904,-6.2775912,17z/data=!3m1!4b1!4m6!3m5!1s0x48670c292581fddd:0x3c0551bb091102f0!8m2!3d53.3477872!4d-6.2750163!16s%2Fg%2F11b807ph80?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D';
 
 export default function Venue() {
 	return (
@@ -60,7 +60,7 @@ export default function Venue() {
 										The Venue
 									</h3>
 									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										Dublin City
+										Workday, Building 152, 152-155 Church St, Smithfield, Dublin 7, D07 A0TN
 									</p>
 								</div>
 							</div>
