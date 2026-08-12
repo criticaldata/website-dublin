@@ -1,5 +1,29 @@
-import { MapPin, TrainFront, Car, Navigation } from 'lucide-react';
+import { MapPin, TrainFront, Plane, Car, Navigation } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import LazyIframe from '@/components/primitives/lazy-iframe';
+
+const directions: { icon: LucideIcon; title: string; body: string }[] = [
+	{
+		icon: MapPin,
+		title: 'The Venue',
+		body: 'Workday, Building 152, 152-155 Church St, Smithfield, Dublin 7, D07 A0TN.',
+	},
+	{
+		icon: TrainFront,
+		title: 'From O’Connell Street: Luas Red Line',
+		body: 'Walk two minutes west to the Abbey Street Luas stop and take the Red Line towards Tallaght or Saggart. Smithfield is the third stop, roughly six minutes, and the venue is a five-minute walk from there across Smithfield Square. If you would rather walk the whole way, it is about twenty minutes along the north quays.',
+	},
+	{
+		icon: Plane,
+		title: 'From Dublin Airport',
+		body: 'Dublin Express route 782 runs to Heuston Station and stops at Arran Quay, at the foot of Church Street and a three-minute walk from the door. Coaches leave roughly every thirty minutes and take about forty minutes. Any other airport coach into the city centre also works: get off near O’Connell Street and pick up the Red Line at Abbey Street. A taxi takes twenty-five to thirty-five minutes depending on traffic.',
+	},
+	{
+		icon: Car,
+		title: 'By Car',
+		body: 'The nearest public car park is Q-Park Smithfield on Bow Street, a two-minute walk from the venue and open from 06:30 on Saturdays. Smithfield sits inside the city’s traffic-managed core, so the Luas is usually the easier option on the day.',
+	},
+];
 
 const MAP_EMBED_URL =
 	'https://maps.google.com/maps?q=Workday+Dublin%2C+152-155+Church+St%2C+Smithfield%2C+Dublin+7%2C+D07+A0TN&z=16&hl=en&output=embed';
@@ -36,7 +60,7 @@ export default function Venue() {
 					<div className="relative rounded-3xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl shadow-teal-900/20">
 						<LazyIframe
 							url={MAP_EMBED_URL}
-							title="Map of Dublin"
+							title="Map of Workday Dublin, Smithfield"
 							className="aspect-[4/3] w-full"
 						/>
 						<a
@@ -52,47 +76,24 @@ export default function Venue() {
 
 					{/* How to get there */}
 					<div className="space-y-4">
-						<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6">
-							<div className="flex items-start gap-4">
-								<MapPin className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
-								<div>
-									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
-										The Venue
-									</h3>
-									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										Workday, Building 152, 152-155 Church St, Smithfield, Dublin 7, D07 A0TN
-									</p>
+						{directions.map(({ icon: Icon, title, body }) => (
+							<div
+								key={title}
+								className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6"
+							>
+								<div className="flex items-start gap-4">
+									<Icon className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
+									<div>
+										<h3 className="text-lg font-bold text-white tracking-tight mb-1">
+											{title}
+										</h3>
+										<p className="text-sm sm:text-base text-white/55 leading-relaxed">
+											{body}
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-
-						<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6">
-							<div className="flex items-start gap-4">
-								<TrainFront className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
-								<div>
-									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
-										From the City Centre: Luas Red Line
-									</h3>
-									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent hover:border-teal-400/30 transition-all duration-300 px-7 py-6">
-							<div className="flex items-start gap-4">
-								<Car className="h-6 w-6 shrink-0 text-teal-300/80 mt-0.5" />
-								<div>
-									<h3 className="text-lg font-bold text-white tracking-tight mb-1">
-										By Car
-									</h3>
-									<p className="text-sm sm:text-base text-white/55 leading-relaxed">
-										
-									</p>
-								</div>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>
