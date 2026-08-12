@@ -23,12 +23,15 @@ export default function Logo() {
 				<div className="relative shrink-0">
 					<div className="logo-badge rounded-full bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 ring-1 ring-teal-400/40 p-0.5">
 						<span className="sr-only">DubLINK</span>
+						{/* Pre-rendered circular badge (opaque disc, skyline inset) —
+						    cropping the transparent mark with object-cover left ragged
+						    edges and beheaded the skyline at this size */}
 						<Image
-							className="logo-mark h-9 w-9 rounded-full object-cover"
-							src="/dublin/dublink-mark.png"
+							className="logo-mark h-9 w-9 rounded-full"
+							src="/dublin/dublink-mark-badge.png"
 							alt="DubLINK LLM-athon"
-							width={40}
-							height={40}
+							width={72}
+							height={72}
 						/>
 					</div>
 					{/* Pigeons take off from the skyline: one ambient flyby on a

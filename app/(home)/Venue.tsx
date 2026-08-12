@@ -55,13 +55,13 @@ export default function Venue() {
 					</span>
 				</h2>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
-					{/* Interactive map */}
+				<div className="space-y-6 lg:space-y-8">
+					{/* Interactive map — full width; wide crop keeps it shallow */}
 					<div className="relative rounded-3xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl shadow-teal-900/20">
 						<LazyIframe
 							url={MAP_EMBED_URL}
 							title="Map of Workday Dublin, Smithfield"
-							className="aspect-[4/3] w-full"
+							className="aspect-[4/3] sm:aspect-[21/9] w-full"
 						/>
 						<a
 							href={GOOGLE_MAPS_URL}
@@ -74,8 +74,8 @@ export default function Venue() {
 						</a>
 					</div>
 
-					{/* How to get there */}
-					<div className="space-y-4">
+					{/* How to get there — wide two-up cards rather than a tall stack */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 						{directions.map(({ icon: Icon, title, body }) => (
 							<div
 								key={title}

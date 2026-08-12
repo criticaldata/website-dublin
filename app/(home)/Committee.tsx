@@ -20,11 +20,11 @@ const committee: {
 	},
 	{
 		name: 'Sebastián Cajas',
-		title: 'Workshop Lead',
+		title: 'Workshop & Scientific Content Lead',
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
 		linkedin: 'https://www.linkedin.com/in/sebasmos777/',
-		role: 'Researcher and technologist working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Drives the vision behind DubLINK and brings that perspective to the design and technical delivery of the day’s programme.',
+		role: 'AI engineer working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Contributes to the design and technical delivery of the day’s programme.',
 	},
 	{
 		name: 'Ezi Ozoani',
