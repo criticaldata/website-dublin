@@ -20,11 +20,11 @@ const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 export const metadata: Metadata = {
 	title: 'DubLINK AI in Healthcare LLM-athon, Dublin',
 	description:
-		'A one-day interactive LLM-athon exploring generative AI in healthcare. Saturday, 19 September 2026 Dublin, Ireland.',
+		'A one-day interactive LLM-athon exploring generative AI in healthcare. Saturday, 19 September 2026 at Workday Dublin, Smithfield, Dublin, Ireland.',
 	openGraph: {
 		title: 'DubLINK AI in Healthcare LLM-athon',
 		description:
-			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare, 19 September 2026, Dublin.',
+			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare, 19 September 2026 at Workday Dublin.',
 		type: 'website',
 		url: SITE_URL,
 		siteName: 'DubLINK',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 				url: OG_IMAGE,
 				width: 1200,
 				height: 630,
-				alt: 'DubLINK AI in Healthcare LLM-athon, 19 September 2026, Dublin',
+				alt: 'DubLINK AI in Healthcare LLM-athon, 19 September 2026, Workday Dublin, Ireland',
 			},
 		],
 	},
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'DubLINK AI in Healthcare LLM-athon',
 		description:
-			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare, 19 September 2026, Dublin.',
+			'Connect. Collaborate. Innovate. Exploring LLMs in healthcare, 19 September 2026 at Workday Dublin.',
 		images: [OG_IMAGE],
 	},
 };

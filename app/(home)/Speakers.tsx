@@ -1,10 +1,18 @@
 import Image from 'next/image';
+import { LinkedInIcon } from '@/components/common/social-icons';
 
-const speakers = [
+const speakers: {
+	name: string;
+	photo: string;
+	role: string;
+	bio: string;
+	linkedin?: string;
+}[] = [
 	{
 		name: 'Dr Leo Anthony Celi',
 		photo: '/dublin/speakers/leo-celi.jpg',
 		role: 'Beth Israel Deaconess Medical Center · Harvard Medical School · MIT',
+		linkedin: 'https://www.linkedin.com/in/leo-anthony-celi-b25131/',
 		bio: 'Intensivist at Beth Israel Deaconess Medical Center, Harvard Medical School, and Senior Research Scientist at MIT. Internationally recognised for his work in critical care, health data science, open science and responsible AI implementation.',
 	},
 	{
@@ -58,9 +66,22 @@ export default function Speakers() {
 								<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 							</div>
 							<div className="p-7">
-								<h3 className="text-2xl font-bold text-white tracking-tight">
-									{speaker.name}
-								</h3>
+								<div className="flex items-center gap-2.5">
+									<h3 className="text-2xl font-bold text-white tracking-tight">
+										{speaker.name}
+									</h3>
+									{speaker.linkedin && (
+										<a
+											href={speaker.linkedin}
+											target="_blank"
+											rel="noopener noreferrer"
+											aria-label={`${speaker.name} on LinkedIn`}
+											className="shrink-0 text-white/40 hover:text-teal-300 transition-colors"
+										>
+											<LinkedInIcon className="h-5 w-5" />
+										</a>
+									)}
+								</div>
 								<p className="mt-1 text-sm font-medium text-teal-300/80 tracking-wide">
 									{speaker.role}
 								</p>

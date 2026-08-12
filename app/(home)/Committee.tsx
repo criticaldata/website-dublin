@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { LinkedInIcon } from '@/components/common/social-icons';
 
 const committee: {
 	name: string;
@@ -7,12 +8,14 @@ const committee: {
 	photoPosition?: string;
 	initials: string;
 	role: string;
+	linkedin?: string;
 }[] = [
 	{
 		name: 'Dr Leo Anthony Celi',
 		title: 'Clinical Advisor',
 		photo: '/dublin/team/leo-celi.jpg',
 		initials: 'LC',
+		linkedin: 'https://www.linkedin.com/in/leo-anthony-celi-b25131/',
 		role: 'Advises on the clinical direction of the programme, drawing on years of datathons organised with MIT Critical Data around the world.',
 	},
 	{
@@ -20,13 +23,15 @@ const committee: {
 		title: 'Workshop Lead',
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
+		linkedin: 'https://www.linkedin.com/in/sebasmos777/',
 		role: 'Researcher and technologist working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Drives the vision behind DubLINK and brings that perspective to the design and technical delivery of the day’s programme.',
 	},
 	{
-		name: 'Dr Ezi Ozoani',
+		name: 'Ezi Ozoani',
 		title: 'AI Ethics & Implementation',
 		photo: '/dublin/team/ezi-ozoani.webp',
 		initials: 'EO',
+		linkedin: 'https://www.linkedin.com/in/ezi-ozoani/',
 		role: 'AI researcher and innovation specialist focused on how AI is implemented responsibly. Ensures ethics and multidisciplinary collaboration are built into every part of the day.',
 	},
 	{
@@ -36,6 +41,7 @@ const committee: {
 		// Portrait crop: keep the face centred in the circular avatar
 		photoPosition: 'object-[center_22%]',
 		initials: 'TT',
+		linkedin: 'https://www.linkedin.com/in/tamas-tiszai-szucs-280930102/',
 		role: 'Consultant Intensivist and Quality & Audit Lead at the host venue. Focused on AI, patient safety and human factors in clinical practice.',
 	},
 	{
@@ -45,7 +51,8 @@ const committee: {
 		// Face sits in the lower half of the frame
 		photoPosition: 'object-[center_68%]',
 		initials: 'MA',
-		role: 'Researcher and educator in artificial intelligence and digital health. Leads the design of the day’s workshops and scientific content, shaping the clinical scenarios participants will work through.',
+		role: 'Researcher and educator in AI and digital health at the Royal College of Surgeons in Ireland. Leads the design of the day’s workshops and scientific content, shaping the clinical scenarios participants will work through.',
+		linkedin: 'https://www.linkedin.com/in/m-ali-0112/',
 	},
 ];
 
@@ -102,9 +109,22 @@ export default function Committee() {
 									</div>
 								)}
 								<div>
-									<h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-tight">
-										{member.name}
-									</h3>
+									<div className="flex items-center gap-2">
+										<h3 className="text-base sm:text-lg font-bold text-white tracking-tight leading-tight">
+											{member.name}
+										</h3>
+										{member.linkedin && (
+											<a
+												href={member.linkedin}
+												target="_blank"
+												rel="noopener noreferrer"
+												aria-label={`${member.name} on LinkedIn`}
+												className="shrink-0 text-white/40 hover:text-teal-300 transition-colors"
+											>
+												<LinkedInIcon className="h-4 w-4" />
+											</a>
+										)}
+									</div>
 									<p className="mt-0.5 text-xs sm:text-sm font-medium text-teal-300/80">
 										{member.title}
 									</p>
