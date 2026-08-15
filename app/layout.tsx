@@ -8,12 +8,12 @@ import { Suspense } from 'react';
 import Spinner from '@/components/primitives/spinner';
 import { Toaster } from '@/components/ui/sonner';
 
-// basePath is baked in at build time (GitHub Pages serves under /website-dublin);
-// icon URLs must carry it or they 404 on the deployed site.
+// The site serves from the root of its custom domain, so basePath is empty.
+// Kept configurable in case it ever goes back to a subpath deployment.
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 export const metadata = {
-	metadataBase: new URL('https://criticaldata.github.io/website-dublin'),
+	metadataBase: new URL('https://dublin.mitcriticaldata.com'),
 	title: 'DubLINK AI in Healthcare LLM-athon',
 	description:
 		'A one-day interactive educational event exploring Large Language Models and generative AI in healthcare. Saturday, 19 September 2026 at Workday Dublin, Smithfield, Dublin, Ireland.',

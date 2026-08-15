@@ -12,9 +12,9 @@ import Partners from './Partners';
 import RegisterCTA from './RegisterCTA';
 import StickyRegister from './StickyRegister';
 
-const SITE_URL = 'https://criticaldata.github.io/website-dublin';
+const SITE_URL = 'https://dublin.mitcriticaldata.com';
 // Absolute URL on purpose: WhatsApp and other scrapers reject relative
-// og:image paths, and metadataBase would drop the /website-dublin prefix.
+// og:image paths.
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export const metadata: Metadata = {
