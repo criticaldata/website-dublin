@@ -1,4 +1,11 @@
-const sessions = [
+type Session = {
+	time: string;
+	title: string;
+	kind: string;
+	speaker?: string;
+};
+
+const sessions: Session[] = [
 	{ time: '08:30–09:00', title: 'Doors Open & Check-in', kind: 'plenary' },
 	{ time: '09:00–09:15', title: 'Welcome & Arrival', kind: 'plenary' },
 	{ time: '09:15–09:45', title: 'Introduction to the LLM-athon', kind: 'plenary' },
@@ -24,9 +31,19 @@ const sessions = [
 		title: 'Group Presentations & Workshop Debrief',
 		kind: 'plenary',
 	},
-	{ time: '14:15–15:00', title: 'Keynote Lecture 1', kind: 'keynote' },
+	{
+		time: '14:15–15:00',
+		title: 'Keynote Lecture 1',
+		kind: 'keynote',
+		speaker: 'Dr John Sheehan',
+	},
 	{ time: '15:00–15:15', title: 'Coffee Break', kind: 'break' },
-	{ time: '15:15–16:00', title: 'Keynote Lecture 2', kind: 'keynote' },
+	{
+		time: '15:15–16:00',
+		title: 'Keynote Lecture 2',
+		kind: 'keynote',
+		speaker: 'Dr Leo Anthony Celi',
+	},
 	{
 		time: '16:00–16:45',
 		title: 'Panel Discussion: The Future of AI in Irish Healthcare',
@@ -93,6 +110,11 @@ export default function Programme() {
 								}`}
 							>
 								{session.title}
+								{session.speaker && (
+									<span className="block mt-0.5 text-[13px] sm:text-sm font-normal tracking-normal text-white/45">
+										{session.speaker}
+									</span>
+								)}
 							</span>
 						</li>
 					))}
