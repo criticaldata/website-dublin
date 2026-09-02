@@ -1,31 +1,32 @@
 const sessions = [
+	{ time: '08:30–09:00', title: 'Doors Open & Check-in', kind: 'plenary' },
 	{ time: '09:00–09:15', title: 'Welcome & Arrival', kind: 'plenary' },
-	{ time: '09:15–10:00', title: 'Keynote Lecture 1', kind: 'keynote' },
-	{ time: '10:00–10:45', title: 'Keynote Lecture 2', kind: 'keynote' },
-	{ time: '10:45–11:15', title: 'Coffee Break', kind: 'break' },
-	{ time: '11:15–11:45', title: 'Introduction to the LLM-athon', kind: 'plenary' },
+	{ time: '09:15–09:45', title: 'Introduction to the LLM-athon', kind: 'plenary' },
+	{
+		time: '09:45–10:30',
+		title: 'Activity 1: Prompt Engineering & Clinical Reasoning',
+		kind: 'activity',
+	},
+	{ time: '10:30–11:00', title: 'Coffee Break', kind: 'break' },
+	{
+		time: '11:00–11:45',
+		title: 'Activity 2: Evaluating LLM Responses',
+		kind: 'activity',
+	},
 	{
 		time: '11:45–12:30',
-		title: 'Activity 1: Prompt Engineering & Clinical Reasoning',
+		title: 'Activity 3: LLM Failure Modes & Safe Implementation',
 		kind: 'activity',
 	},
 	{ time: '12:30–13:30', title: 'Lunch & Networking', kind: 'break' },
 	{
 		time: '13:30–14:15',
-		title: 'Activity 2: Evaluating LLM Responses',
-		kind: 'activity',
-	},
-	{
-		time: '14:15–15:00',
-		title: 'Activity 3: LLM Failure Modes & Safe Implementation',
-		kind: 'activity',
-	},
-	{ time: '15:00–15:15', title: 'Coffee Break', kind: 'break' },
-	{
-		time: '15:15–16:00',
 		title: 'Group Presentations & Workshop Debrief',
 		kind: 'plenary',
 	},
+	{ time: '14:15–15:00', title: 'Keynote Lecture 1', kind: 'keynote' },
+	{ time: '15:00–15:15', title: 'Coffee Break', kind: 'break' },
+	{ time: '15:15–16:00', title: 'Keynote Lecture 2', kind: 'keynote' },
 	{
 		time: '16:00–16:45',
 		title: 'Panel Discussion: The Future of AI in Irish Healthcare',
@@ -64,7 +65,7 @@ export default function Programme() {
 					<span className="italic text-white/50">start to finish.</span>
 				</h2>
 				<p className="text-base sm:text-lg text-white/50 max-w-2xl mb-8 sm:mb-14">
-					Keynotes in the morning, hands-on LLM activities through the
+					Hands-on LLM activities through the morning, keynotes in the
 					afternoon, closing with a panel on the future of AI in Irish
 					healthcare.
 				</p>
