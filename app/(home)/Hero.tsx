@@ -151,7 +151,7 @@ export default function Hero() {
 									className="relative h-14 rounded-full px-8 text-base font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/30 transition-all duration-300 hover:shadow-teal-900/30 hover:-translate-y-0.5 group overflow-hidden"
 								>
 									<span className="relative flex items-center">
-										Register Your Interest
+										Join the Waitlist
 										<ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
 									</span>
 								</Button>

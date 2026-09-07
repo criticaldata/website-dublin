@@ -48,7 +48,7 @@ export default function RegisterCTA() {
 
 				<div className="mb-12 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2 text-sm text-teal-200/90">
 					<BellRing className="h-4 w-4" />
-					Places will be limited, so don&rsquo;t miss out
+					Fully booked, register to join the waitlist
 				</div>
 
 				{/* Primary CTA — registration form */}
@@ -56,7 +56,7 @@ export default function RegisterCTA() {
 					<a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
 						<Button className="relative h-16 rounded-full px-12 text-lg font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/40 transition-all duration-300 hover:shadow-teal-900/40 hover:-translate-y-0.5 group overflow-hidden">
 							<span className="relative flex items-center">
-								Register Your Interest
+								Join the Waitlist
 								<ArrowUpRight className="ml-3 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
 							</span>
 						</Button>

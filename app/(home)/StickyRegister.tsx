@@ -48,7 +48,7 @@ export default function StickyRegister() {
 					{/* Animated pulse ring */}
 					<span className="absolute inset-0 rounded-full border border-teal-300/40 animate-ping opacity-40" />
 					<span className="relative flex items-center">
-						Register Interest
+						Join the Waitlist
 						<ArrowRightIcon className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
 					</span>
 				</button>
