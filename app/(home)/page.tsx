@@ -6,11 +6,12 @@ import Programme from './Programme';
 import Workshop from './Workshop';
 import Audience from './Audience';
 import Speakers from './Speakers';
+import Panel from './Panel';
 import Committee from './Committee';
 import Venue from './Venue';
 import Partners from './Partners';
 import RegisterCTA from './RegisterCTA';
-import StickyRegister from './StickyRegister';
+// import StickyRegister from './StickyRegister';
 
 const SITE_URL = 'https://dublin.mitcriticaldata.com';
 // Absolute URL on purpose: WhatsApp and other scrapers reject relative
@@ -62,13 +63,14 @@ export default function HomePage() {
 				<Workshop />
 				<Audience />
 				<Speakers />
+				<Panel />
 				<Committee />
 				<Venue />
 				<Partners />
 				<RegisterCTA />
 			</div>
 
-			<StickyRegister />
+			{/* Registration closed: <StickyRegister /> */}
 		</div>
 	);
 }

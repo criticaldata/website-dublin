@@ -84,7 +84,7 @@ export default function Header({ children }: { children?: React.ReactNode }) {
 								href="/#register"
 								className="text-teal-300 hover:text-teal-200 cursor-pointer font-medium"
 							>
-								Register
+								Registration
 							</Link>
 						</DropdownMenuItem>
 					</DropdownMenuContent>

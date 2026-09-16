@@ -1,8 +1,9 @@
-import { BellRing, ArrowUpRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { BellRing } from 'lucide-react';
+// import { ArrowUpRight } from 'lucide-react';
+// import { Button } from '@/components/ui/button';
 
 const CONTACT_EMAIL = 'dublink.llmathon@gmail.com';
-const REGISTER_URL = 'https://medwrite.ai/dublink-event';
+// const REGISTER_URL = 'https://medwrite.ai/dublink-event';
 
 export default function RegisterCTA() {
 	return (
@@ -42,16 +43,17 @@ export default function RegisterCTA() {
 				</h2>
 
 				<p className="text-lg sm:text-xl text-white/55 mb-6 max-w-2xl mx-auto leading-relaxed">
-					Register your interest now and we&rsquo;ll keep you posted on the
-					programme in the run-up to the event.
+					Unfortunately, registration is now closed. Thank you to everyone who
+					registered, we look forward to seeing you on Saturday 19 September.
 				</p>
 
 				<div className="mb-12 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2 text-sm text-teal-200/90">
 					<BellRing className="h-4 w-4" />
-					Fully booked, register to join the waitlist
+					Registration closed
 				</div>
 
-				{/* Primary CTA — registration form */}
+				{/* Registration closed, waitlist link removed.
+				Primary CTA, registration form
 				<div className="flex justify-center">
 					<a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
 						<Button className="relative h-16 rounded-full px-12 text-lg font-semibold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:via-teal-400 hover:to-cyan-400 text-white shadow-2xl shadow-emerald-900/40 transition-all duration-300 hover:shadow-teal-900/40 hover:-translate-y-0.5 group overflow-hidden">
@@ -62,6 +64,8 @@ export default function RegisterCTA() {
 						</Button>
 					</a>
 				</div>
+
+				*/}
 
 				{/* Contact */}
 				<div className="mt-12 text-sm text-white/40 leading-relaxed">

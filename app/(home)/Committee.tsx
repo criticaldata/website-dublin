@@ -16,7 +16,7 @@ const committee: {
 		photo: '/dublin/team/leo-celi.jpg',
 		initials: 'LC',
 		linkedin: 'https://www.linkedin.com/in/leo-anthony-celi-b25131/',
-		role: 'Advises on the clinical direction of the programme, drawing on years of datathons organised with MIT Critical Data around the world.',
+		role: 'Senior Research Scientist at MIT, Associate Professor of Medicine at Harvard Medical School and Critical Care Physician at Beth Israel Deaconess Medical Center. Clinical Research Director at the MIT Laboratory for Computational Physiology, internationally recognised for his work in clinical data science, responsible AI, and addressing bias and inequity in healthcare AI.',
 	},
 	{
 		name: 'Sebastián Cajas',
@@ -24,7 +24,7 @@ const committee: {
 		photo: '/dublin/team/sebastian-cajas.png',
 		initials: 'SC',
 		linkedin: 'https://www.linkedin.com/in/sebasmos777/',
-		role: 'AI engineer working at the intersection of human and AI systems, with a focus on generative AI in healthcare. Contributes to the design and technical delivery of the day’s programme.',
+		role: 'Senior AI/ML Engineer with 9+ years of experience building and deploying intelligent systems. At Workday, he focuses on scaling human-AI systems. He has led and contributed to 40+ funded projects across healthcare, climate and scientific computing, collaborates with MIT Critical Data on open-source medical AI, and previously worked with CeADAR, Ireland’s National Centre for AI, and Harvard’s Visual Computing Group.',
 	},
 	{
 		name: 'Ezi Ozoani',
@@ -32,7 +32,7 @@ const committee: {
 		photo: '/dublin/team/ezi-ozoani.webp',
 		initials: 'EO',
 		linkedin: 'https://www.linkedin.com/in/ezi-ozoani/',
-		role: 'AI researcher and innovation specialist focused on how AI is implemented responsibly. Ensures ethics and multidisciplinary collaboration are built into every part of the day.',
+		role: 'Co-founder and Head of AI at Aethon.fund and an AI safety and ethics researcher, with an MEng from Trinity College Dublin. Previously led ML ethics and red-teaming work at Hugging Face, and has worked on AI governance and safety, including with the EU AI Office on the Codes of Practice. Her work spans AI safety, interpretability, reinforcement learning and responsible AI.',
 	},
 	{
 		name: 'Dr Tamas Tiszai-Szűcs',
@@ -42,7 +42,7 @@ const committee: {
 		photoPosition: 'object-[center_22%]',
 		initials: 'TT',
 		linkedin: 'https://www.linkedin.com/in/tamas-tiszai-szucs-280930102/',
-		role: 'Consultant Intensivist and Quality & Audit Lead at the host venue. Focused on AI, patient safety and human factors in clinical practice.',
+		role: 'Consultant Intensivist and Quality & Audit Lead in the Intensive Care Unit at Tallaght University Hospital, with an MSc in Human Factors in Patient Safety from RCSI. Leads quality improvement, patient safety and risk management initiatives, and coordinates audit and data governance. His recent work focuses on cognitive biases in clinical decision-making and human-AI interaction.',
 	},
 	{
 		name: 'Dr Muhammad Ali',
@@ -51,7 +51,7 @@ const committee: {
 		// Face sits in the lower half of the frame
 		photoPosition: 'object-[center_68%]',
 		initials: 'MA',
-		role: 'Researcher and educator in AI and digital health at the Royal College of Surgeons in Ireland. Leads the design of the day’s workshops and scientific content, shaping the clinical scenarios participants will work through.',
+		role: 'Educator and Researcher in AI and Digital Health at RCSI, where he recently completed his PhD in AI and precision medicine. With a background in bioinformatics, his expertise spans machine learning, genomics, histopathology and multi-omic data analysis. Recipient of the RCSI Vice Chancellor Innovation Award.',
 		linkedin: 'https://www.linkedin.com/in/m-ali-0112/',
 	},
 ];

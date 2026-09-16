@@ -7,8 +7,17 @@ type Session = {
 
 const sessions: Session[] = [
 	{ time: '08:30–09:00', title: 'Doors Open & Check-in', kind: 'plenary' },
-	{ time: '09:00–09:15', title: 'Welcome & Arrival', kind: 'plenary' },
-	{ time: '09:15–09:45', title: 'Introduction to the LLM-athon', kind: 'plenary' },
+	{
+		time: '09:00–09:15',
+		title: 'Arrival, Coffee & Settling In',
+		kind: 'break',
+	},
+	{
+		time: '09:15–09:45',
+		title: 'Introduction to the LLM-athon',
+		kind: 'plenary',
+		speaker: 'Sebastián Cajas & Dr Muhammad Ali',
+	},
 	{
 		time: '09:45–10:30',
 		title: 'Activity 1: Prompt Engineering & Clinical Reasoning',
@@ -33,21 +42,23 @@ const sessions: Session[] = [
 	},
 	{
 		time: '14:15–15:00',
-		title: 'Keynote Lecture 1',
+		title: 'Keynote: One Patient. One System. One Question: Is an LLM Ready for Grace’s Journey?',
 		kind: 'keynote',
 		speaker: 'Dr John Sheehan',
 	},
-	{ time: '15:00–15:15', title: 'Coffee Break', kind: 'break' },
 	{
-		time: '15:15–16:00',
-		title: 'Keynote Lecture 2',
+		time: '15:00–15:45',
+		title: 'Keynote: AI Stands for Alea Iacta (The Die is Cast)',
 		kind: 'keynote',
-		speaker: 'Dr Leo Anthony Celi',
+		speaker: 'Dr Leo Anthony Celi (online)',
 	},
+	{ time: '15:45–16:00', title: 'Coffee Break', kind: 'break' },
 	{
 		time: '16:00–16:45',
 		title: 'Panel Discussion: The Future of AI in Irish Healthcare',
 		kind: 'keynote',
+		speaker:
+			'Leo Anthony Celi, John Sheehan, Natalie Cole, Ezi Ozoani, Noeleen McHugh, Seán Kirwan. Moderated by Muhammad Ali & Tamás Tiszai-Szűcs',
 	},
 	{ time: '16:45–17:00', title: 'Closing Remarks', kind: 'plenary' },
 ];

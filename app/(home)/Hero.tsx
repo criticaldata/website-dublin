@@ -141,6 +141,7 @@ export default function Hero() {
 							className="mt-14 lg:pl-[8%] flex flex-col sm:flex-row items-start sm:items-center gap-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
 							style={{ animationDelay: '700ms', animationFillMode: 'both' }}
 						>
+							{/* Registration closed, waitlist link removed.
 							<a
 								href="https://medwrite.ai/dublink-event"
 								target="_blank"
@@ -156,6 +157,7 @@ export default function Hero() {
 									</span>
 								</Button>
 							</a>
+							*/}
 
 							<Link
 								href="#about"

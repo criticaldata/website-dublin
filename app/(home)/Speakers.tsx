@@ -5,6 +5,7 @@ const speakers: {
 	name: string;
 	photo: string;
 	role: string;
+	talk: string;
 	bio: string;
 	linkedin?: string;
 }[] = [
@@ -12,14 +13,16 @@ const speakers: {
 		name: 'Dr Leo Anthony Celi',
 		photo: '/dublin/speakers/leo-celi.jpg',
 		role: 'Beth Israel Deaconess Medical Center · Harvard Medical School · MIT',
+		talk: 'AI Stands for Alea Iacta (The Die is Cast)',
 		linkedin: 'https://www.linkedin.com/in/leo-anthony-celi-b25131/',
-		bio: 'Intensivist at Beth Israel Deaconess Medical Center, Harvard Medical School, and Senior Research Scientist at MIT. Internationally recognised for his work in critical care, health data science, open science and responsible AI implementation.',
+		bio: 'Senior Research Scientist at MIT, Associate Professor of Medicine at Harvard Medical School and Critical Care Physician at Beth Israel Deaconess Medical Center. Internationally recognised for his work in clinical data science, responsible AI, and addressing bias and inequity in healthcare AI.',
 	},
 	{
 		name: 'Dr John Sheehan',
 		photo: '/dublin/speakers/john-sheehan.jpg',
 		role: 'Consultant Radiologist · Blackrock Health',
-		bio: 'Irish consultant radiologist, educator and healthcare innovation leader with extensive experience in artificial intelligence, digital transformation and AI education within Irish healthcare.',
+		talk: 'One Patient. One System. One Question: Is an LLM Ready for Grace’s Journey?',
+		bio: 'Consultant Radiologist at Blackrock Health and Mobile Medical Diagnostics, Clinical Director of Radiology at Hermitage Clinic, Adjunct Faculty at the RCSI Graduate School of Healthcare Management and Chair of Innovation at AIMS Summit. A member of Ireland’s Digital Health Leadership Strategy Group, with particular interests in digital health, AI and emerging technologies.',
 	},
 ];
 
@@ -85,6 +88,9 @@ export default function Speakers() {
 								<p className="mt-1 text-sm font-medium text-teal-300/80 tracking-wide">
 									{speaker.role}
 								</p>
+								<p className="mt-4 text-base sm:text-lg font-semibold italic text-white/85 leading-snug">
+									“{speaker.talk}”
+								</p>
 								<p className="mt-4 text-sm sm:text-base text-white/55 leading-relaxed">
 									{speaker.bio}
 								</p>
@@ -93,9 +99,6 @@ export default function Speakers() {
 					))}
 				</div>
 
-				<p className="mt-10 text-sm sm:text-base text-white/40 italic">
-					Additional speakers will be announced.
-				</p>
 			</div>
 		</section>
 	);
