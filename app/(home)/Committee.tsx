@@ -12,7 +12,7 @@ const committee: {
 }[] = [
 	{
 		name: 'Dr Leo Anthony Celi',
-		title: 'Clinical Advisor',
+		title: 'Clinical Advisor, MIT Critical Data',
 		photo: '/dublin/team/leo-celi.jpg',
 		initials: 'LC',
 		linkedin: 'https://www.linkedin.com/in/leo-anthony-celi-b25131/',
@@ -36,7 +36,7 @@ const committee: {
 	},
 	{
 		name: 'Dr Tamas Tiszai-Szűcs',
-		title: 'Consultant Intensivist, TUH',
+		title: 'Clinical Advisor',
 		photo: '/dublin/team/tamas-tiszai-szucs.jpg',
 		// Portrait crop: keep the face centred in the circular avatar
 		photoPosition: 'object-[center_22%]',
