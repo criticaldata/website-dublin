@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import RenderParticles from '@/components/primitives/particles';
 import Hero from './Hero';
 import About from './About';
+import Winner from './Winner';
 import Programme from './Programme';
 import Workshop from './Workshop';
 import Audience from './Audience';
@@ -58,6 +59,7 @@ export default function HomePage() {
 			{/* Content layered above particles */}
 			<div className="relative z-10">
 				<Hero />
+				<Winner />
 				<About />
 				<Programme />
 				<Workshop />
