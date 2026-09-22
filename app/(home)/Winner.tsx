@@ -11,6 +11,13 @@ const winners = [
 	{ name: 'Gabor Zilahi', initials: 'GZ' },
 ];
 
+// Second and third place. Names are not shown yet: unlike the winners, these
+// teams have not been asked. The section invites them to get in touch.
+const podium = [
+	{ place: 'Second', team: 'Team 9' },
+	{ place: 'Third', team: 'Team 2' },
+];
+
 export default function Winner() {
 	return (
 		<section
@@ -46,7 +53,8 @@ export default function Winner() {
 					Eleven judges scored every presentation on the failure found and
 					explained, collaboration, creativity, the quality of the questions
 					asked and clarity. Team 10 came first, topping the field on the
-					failure they found, on the questions they asked and on clarity.
+					failure they found, on the questions they asked and on clarity, with
+					Team 9 second and Team 2 third.
 				</p>
 
 				{/* The winning team */}
@@ -71,11 +79,40 @@ export default function Winner() {
 					))}
 				</div>
 
+				{/* Second and third */}
+				<div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+					{podium.map((entry) => (
+						<div
+							key={entry.team}
+							className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent px-6 py-6 flex items-baseline gap-4"
+						>
+							<span className="text-[0.7rem] uppercase tracking-[0.25em] text-teal-300/70 font-bold">
+								{entry.place}
+							</span>
+							<span className="text-lg font-bold text-white tracking-tight">
+								{entry.team}
+							</span>
+						</div>
+					))}
+				</div>
+
+				<p className="mt-6 text-sm sm:text-base text-white/50 leading-relaxed max-w-3xl">
+					If you were on the team that came second or third and would like to be
+					named here, email{' '}
+					<a
+						href="mailto:dublink.llmathon@gmail.com"
+						className="text-teal-300/90 hover:text-teal-200 underline underline-offset-4"
+					>
+						dublink.llmathon@gmail.com
+					</a>{' '}
+					and we will add you.
+				</p>
+
 				{/* Everyone else */}
 				<div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 border-t border-white/10 pt-12">
 					<div className="lg:col-span-7">
 						<p className="text-base sm:text-lg text-white/60 leading-relaxed">
-							Six teams presented, and the field behind first place was close
+							Six teams presented, and the field below third place was close
 							enough that the order is not worth reading anything into. Every
 							team found something real. The finding they reached
 							independently of one another: the models downgraded care once the
