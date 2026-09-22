@@ -1,4 +1,5 @@
 import { Trophy } from 'lucide-react';
+import { PRIMARY_CONTACT } from '@/lib/organisers';
 
 // Team 10, first place at DubLINK on 19 September 2026. Names as given on the
 // day's attendance record; no affiliations, since the only affiliation field in
@@ -99,12 +100,14 @@ export default function Winner() {
 
 				<p className="mt-6 text-sm sm:text-base text-white/50 leading-relaxed max-w-3xl">
 					If you were on the team that came second or third and would like to be
-					named here, email{' '}
+					named here,{' '}
 					<a
-						href="mailto:dublink.llmathon@gmail.com"
+						href={PRIMARY_CONTACT.linkedin}
+						target="_blank"
+						rel="noopener noreferrer"
 						className="text-teal-300/90 hover:text-teal-200 underline underline-offset-4"
 					>
-						dublink.llmathon@gmail.com
+						message {PRIMARY_CONTACT.name} on LinkedIn
 					</a>{' '}
 					and we will add you.
 				</p>

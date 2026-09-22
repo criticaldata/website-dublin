@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { PRIMARY_CONTACT } from '@/lib/organisers';
 
 const partners: {
 	name: string;
@@ -75,10 +76,12 @@ export default function Partners() {
 				<p className="mt-10 text-sm text-white/40">
 					Interested in partnering or sponsoring?{' '}
 					<a
-						href="mailto:dublink.llmathon@gmail.com"
+						href={PRIMARY_CONTACT.linkedin}
+						target="_blank"
+						rel="noopener noreferrer"
 						className="text-teal-300/90 hover:text-teal-200 font-medium transition-colors"
 					>
-						Get in touch
+						Message {PRIMARY_CONTACT.name} on LinkedIn
 					</a>
 					.
 				</p>

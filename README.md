@@ -20,4 +20,4 @@ npm start
 
 ## Contact
 
-General enquiries: dublink.llmathon@gmail.com
+General enquiries: message the organisers on LinkedIn, contacts in `lib/organisers.ts`.

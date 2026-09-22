@@ -1,8 +1,10 @@
 import { BellRing } from 'lucide-react';
+import { ORGANISERS } from '@/lib/organisers';
+import { LinkedInIcon } from '@/components/common/social-icons';
 // import { ArrowUpRight } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
-const CONTACT_EMAIL = 'dublink.llmathon@gmail.com';
+
 // const REGISTER_URL = 'https://medwrite.ai/dublink-event';
 
 export default function RegisterCTA() {
@@ -67,18 +69,26 @@ export default function RegisterCTA() {
 
 				*/}
 
-				{/* Contact */}
+				{/* Contact: the organisers on LinkedIn, no shared inbox */}
 				<div className="mt-12 text-sm text-white/40 leading-relaxed">
-					<p>
-						General enquiries for registration, programme, speakers or
-						sponsorship:{' '}
-						<a
-							href={`mailto:${CONTACT_EMAIL}`}
-							className="font-mono text-teal-300/80 hover:text-teal-200 transition-colors"
-						>
-							{CONTACT_EMAIL}
-						</a>
+					<p className="mb-4">
+						Questions about the programme, the write-up or a future edition?
+						Message any of the organisers on LinkedIn.
 					</p>
+					<div className="flex flex-wrap justify-center gap-x-3 gap-y-2">
+						{ORGANISERS.map((person) => (
+							<a
+								key={person.name}
+								href={person.linkedin}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-4 py-1.5 text-teal-300/80 hover:border-teal-400/40 hover:text-teal-200 transition-colors"
+							>
+								<LinkedInIcon className="h-3.5 w-3.5" />
+								{person.name}
+							</a>
+						))}
+					</div>
 				</div>
 			</div>
 		</section>
