@@ -9,6 +9,7 @@ const winners = [
 	{ name: "Jean O'Sullivan", initials: 'JO' },
 	{ name: 'Apoorv Purohit', initials: 'AP' },
 	{ name: 'Gabor Zilahi', initials: 'GZ' },
+	{ name: 'Rabiat Muhammed', initials: 'RM' },
 ];
 
 // Second and third place. Names are not shown yet: unlike the winners, these
@@ -57,8 +58,8 @@ export default function Winner() {
 					Team 9 second and Team 2 third.
 				</p>
 
-				{/* The winning team */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+				{/* The winning team, six across on wide screens */}
+				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
 					{winners.map((person) => (
 						<div
 							key={person.name}
