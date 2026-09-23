@@ -119,9 +119,9 @@ export default function Committee() {
 												target="_blank"
 												rel="noopener noreferrer"
 												aria-label={`${member.name} on LinkedIn`}
-												className="shrink-0 text-white/40 hover:text-teal-300 transition-colors"
+												className="shrink-0 text-white/55 hover:text-teal-300 transition-colors"
 											>
-												<LinkedInIcon className="h-4 w-4" />
+												<LinkedInIcon className="h-5 w-5" />
 											</a>
 										)}
 									</div>

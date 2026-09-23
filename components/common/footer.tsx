@@ -1,5 +1,3 @@
-import { PRIMARY_CONTACT } from '@/lib/organisers';
-import { LinkedInIcon } from '@/components/common/social-icons';
 
 export default function Footer() {
 	return (
@@ -9,15 +7,6 @@ export default function Footer() {
 					&copy; {new Date().getFullYear()} DubLINK AI in Healthcare LLM-athon
 					&middot; Dublin, Ireland
 				</p>
-				<a
-					href={PRIMARY_CONTACT.linkedin}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
-				>
-					<LinkedInIcon className="h-4 w-4" />
-					{PRIMARY_CONTACT.name}
-				</a>
 			</div>
 			<p className="text-xs text-gray-500 text-center sm:text-left">
 				Header photo:{' '}

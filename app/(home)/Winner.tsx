@@ -13,11 +13,31 @@ const winners = [
 	{ name: 'Rabiat Muhammed', initials: 'RM' },
 ];
 
-// Second and third place. Names are not shown yet: unlike the winners, these
-// teams have not been asked. The section invites them to get in touch.
+// Second and third place, named on 23 September from the lists the organisers
+// supplied. Neither is complete: both teams had members nobody has a record
+// of, so the section says so and invites them to get in touch.
 const podium = [
-	{ place: 'Second', team: 'Team 9' },
-	{ place: 'Third', team: 'Team 2' },
+	{
+		place: 'Second',
+		team: 'Team 9',
+		members: [
+			"David O'Regan",
+			'Pat Conroy',
+			'Charles Wesley',
+			'Sergey Avdeychik',
+			'Conor Kenny',
+		],
+	},
+	{
+		place: 'Third',
+		team: 'Team 2',
+		members: [
+			'P J. Fitzpatrick',
+			'Marina V.',
+			'Cesar Alba Moreno',
+			'Anna Nikitchenko',
+		],
+	},
 ];
 
 export default function Winner() {
@@ -81,26 +101,38 @@ export default function Winner() {
 					))}
 				</div>
 
-				{/* Second and third */}
+				{/* Second and third, with the members we can name */}
 				<div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
 					{podium.map((entry) => (
 						<div
 							key={entry.team}
-							className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent px-6 py-6 flex items-baseline gap-4"
+							className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent px-6 py-6"
 						>
-							<span className="text-[0.7rem] uppercase tracking-[0.25em] text-teal-300/70 font-bold">
-								{entry.place}
-							</span>
-							<span className="text-lg font-bold text-white tracking-tight">
-								{entry.team}
-							</span>
+							<div className="flex items-baseline gap-4">
+								<span className="text-[0.7rem] uppercase tracking-[0.25em] text-teal-300/70 font-bold">
+									{entry.place}
+								</span>
+								<span className="text-lg font-bold text-white tracking-tight">
+									{entry.team}
+								</span>
+							</div>
+							<ul className="mt-4 flex flex-wrap gap-x-2 gap-y-1 text-sm text-white/60">
+								{entry.members.map((member, i) => (
+									<li key={member}>
+										{member}
+										{i < entry.members.length - 1 && (
+											<span className="text-white/25"> ·</span>
+										)}
+									</li>
+								))}
+							</ul>
 						</div>
 					))}
 				</div>
 
 				<p className="mt-6 text-sm sm:text-base text-white/50 leading-relaxed max-w-3xl">
-					If you were on the team that came second or third and would like to be
-					named here,{' '}
+					Both of those lists are incomplete. If you were on the team that came
+					second or third and are not named here,{' '}
 					<a
 						href={PRIMARY_CONTACT.linkedin}
 						target="_blank"

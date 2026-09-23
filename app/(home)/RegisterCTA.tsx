@@ -1,6 +1,4 @@
 import { BellRing } from 'lucide-react';
-import { ORGANISERS } from '@/lib/organisers';
-import { LinkedInIcon } from '@/components/common/social-icons';
 // import { ArrowUpRight } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
@@ -69,26 +67,13 @@ export default function RegisterCTA() {
 
 				*/}
 
-				{/* Contact: the organisers on LinkedIn, no shared inbox */}
+				{/* Contact: the committee cards above carry each LinkedIn link */}
 				<div className="mt-12 text-sm text-white/40 leading-relaxed">
-					<p className="mb-4">
+					<p>
 						Questions about the programme, the write-up or a future edition?
-						Message any of the organisers on LinkedIn.
+						Message any of the organisers on LinkedIn, linked on their cards
+						above.
 					</p>
-					<div className="flex flex-wrap justify-center gap-x-3 gap-y-2">
-						{ORGANISERS.map((person) => (
-							<a
-								key={person.name}
-								href={person.linkedin}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-4 py-1.5 text-teal-300/80 hover:border-teal-400/40 hover:text-teal-200 transition-colors"
-							>
-								<LinkedInIcon className="h-3.5 w-3.5" />
-								{person.name}
-							</a>
-						))}
-					</div>
 				</div>
 			</div>
 		</section>
