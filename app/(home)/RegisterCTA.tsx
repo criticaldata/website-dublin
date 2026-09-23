@@ -1,4 +1,3 @@
-import { BellRing } from 'lucide-react';
 // import { ArrowUpRight } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
@@ -36,21 +35,23 @@ export default function RegisterCTA() {
 
 				{/* Headline */}
 				<h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter text-white leading-[1.05] mb-8">
-					<span className="block">Be there when Dublin</span>
+					<span className="block">Thanks for</span>
 					<span className="block italic bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-						meets AI.
+						joining us.
 					</span>
 				</h2>
 
-				<p className="text-lg sm:text-xl text-white/55 mb-6 max-w-2xl mx-auto leading-relaxed">
-					Unfortunately, registration is now closed. Thank you to everyone who
-					registered, we look forward to seeing you on Saturday 19 September.
+				<p className="text-lg sm:text-xl text-white/55 max-w-2xl mx-auto leading-relaxed">
+					Registration&rsquo;s closed for this year. Want to collaborate on the
+					next edition? Reach us at{' '}
+					<a
+						href="mailto:sebasmos@mit.edu"
+						className="text-teal-300/90 hover:text-teal-200 underline underline-offset-4"
+					>
+						sebasmos@mit.edu
+					</a>
+					.
 				</p>
-
-				<div className="mb-12 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/[0.06] px-5 py-2 text-sm text-teal-200/90">
-					<BellRing className="h-4 w-4" />
-					Registration closed
-				</div>
 
 				{/* Registration closed, waitlist link removed.
 				Primary CTA, registration form
@@ -66,15 +67,6 @@ export default function RegisterCTA() {
 				</div>
 
 				*/}
-
-				{/* Contact: the committee cards above carry each LinkedIn link */}
-				<div className="mt-12 text-sm text-white/40 leading-relaxed">
-					<p>
-						Questions about the programme, the write-up or a future edition?
-						Message any of the organisers on LinkedIn, linked on their cards
-						above.
-					</p>
-				</div>
 			</div>
 		</section>
 	);
