@@ -1,4 +1,4 @@
-import { Trophy } from 'lucide-react';
+import { Trophy, Medal } from 'lucide-react';
 import { PRIMARY_CONTACT } from '@/lib/organisers';
 
 // Team 10, first place at DubLINK on 19 September 2026. Names as given on the
@@ -20,6 +20,7 @@ const podium = [
 	{
 		place: 'Second',
 		team: 'Team 9',
+		medal: 'silver' as const,
 		members: [
 			"David O'Regan",
 			'Pat Conroy',
@@ -31,6 +32,7 @@ const podium = [
 	{
 		place: 'Third',
 		team: 'Team 2',
+		medal: 'bronze' as const,
 		members: [
 			'P J. Fitzpatrick',
 			'Marina V.',
@@ -39,6 +41,34 @@ const podium = [
 		],
 	},
 ];
+
+// Gold, silver and bronze. Each place gets one palette, used for its medal
+// disc, its card edge and its label, so the three read as a podium rather
+// than as three identical cards.
+const medals = {
+	gold: {
+		disc: 'from-amber-200/90 to-yellow-500/80 ring-amber-200/70 text-amber-950',
+		card: 'border-amber-300/30 from-amber-300/[0.08] hover:border-amber-300/60',
+		glow: 'group-hover:bg-amber-300/20',
+		label: 'text-amber-200/90',
+		initials:
+			'from-amber-200/30 to-yellow-500/20 ring-2 ring-amber-200/50 group-hover:ring-amber-200/80 text-amber-100',
+	},
+	silver: {
+		disc: 'from-slate-100/90 to-slate-400/80 ring-slate-200/70 text-slate-900',
+		card: 'border-slate-300/25 from-slate-200/[0.06] hover:border-slate-200/50',
+		glow: 'group-hover:bg-slate-200/15',
+		label: 'text-slate-200/90',
+		initials: '',
+	},
+	bronze: {
+		disc: 'from-orange-300/90 to-amber-700/80 ring-orange-300/60 text-amber-950',
+		card: 'border-orange-400/25 from-orange-400/[0.06] hover:border-orange-300/50',
+		glow: 'group-hover:bg-orange-300/15',
+		label: 'text-orange-200/90',
+		initials: '',
+	},
+} as const;
 
 export default function Winner() {
 	return (
@@ -60,8 +90,8 @@ export default function Winner() {
 				</div>
 
 				<div className="flex items-start gap-5 mb-6">
-					<div className="hidden sm:flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400/20 to-cyan-400/10 ring-1 ring-teal-400/40">
-						<Trophy className="h-7 w-7 text-teal-300" />
+					<div className="hidden sm:flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-200/25 to-yellow-500/10 ring-1 ring-amber-200/50">
+						<Trophy className="h-7 w-7 text-amber-200" />
 					</div>
 					<h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tighter text-white leading-[1.05] max-w-4xl">
 						Team 10 won the first{' '}
@@ -79,22 +109,43 @@ export default function Winner() {
 					Team 9 second and Team 2 third.
 				</p>
 
+				{/* First place, with its gold medal */}
+				<div className="flex items-center gap-4 mb-4">
+					<div
+						className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ring-2 shadow-lg shadow-amber-900/30 ${medals.gold.disc}`}
+					>
+						<Medal className="h-6 w-6" />
+					</div>
+					<div>
+						<p className="text-[0.7rem] uppercase tracking-[0.25em] font-bold text-amber-200/90">
+							First
+						</p>
+						<p className="text-lg font-bold text-white tracking-tight leading-tight">
+							Team 10
+						</p>
+					</div>
+				</div>
+
 				{/* The winning team, six across on wide screens */}
 				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
 					{winners.map((person) => (
 						<div
 							key={person.name}
-							className="group relative rounded-2xl border border-teal-400/20 bg-gradient-to-br from-teal-400/[0.07] to-transparent hover:border-teal-400/50 transition-all duration-300 px-5 py-7 text-center overflow-hidden"
+							className={`group relative rounded-2xl border bg-gradient-to-br to-transparent transition-all duration-300 px-5 py-7 text-center overflow-hidden ${medals.gold.card}`}
 						>
-							<div className="absolute -top-10 -right-10 h-24 w-24 bg-teal-400/0 group-hover:bg-teal-400/15 blur-2xl rounded-full transition-all duration-500" />
+							<div
+								className={`absolute -top-10 -right-10 h-24 w-24 bg-transparent blur-2xl rounded-full transition-all duration-500 ${medals.gold.glow}`}
+							/>
 
-							<div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500/25 to-cyan-500/20 ring-2 ring-teal-400/40 group-hover:ring-teal-400/70 text-teal-200 font-bold transition-all">
+							<div
+								className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br font-bold transition-all ${medals.gold.initials}`}
+							>
 								{person.initials}
 							</div>
 							<h3 className="text-sm sm:text-base font-bold text-white tracking-tight leading-tight">
 								{person.name}
 							</h3>
-							<p className="mt-1 text-xs font-medium text-teal-300/70">
+							<p className="mt-1 text-xs font-medium text-amber-200/70">
 								Team 10
 							</p>
 						</div>
@@ -106,15 +157,24 @@ export default function Winner() {
 					{podium.map((entry) => (
 						<div
 							key={entry.team}
-							className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent px-6 py-6"
+							className={`group rounded-2xl border bg-gradient-to-br to-transparent px-6 py-6 transition-all duration-300 ${medals[entry.medal].card}`}
 						>
-							<div className="flex items-baseline gap-4">
-								<span className="text-[0.7rem] uppercase tracking-[0.25em] text-teal-300/70 font-bold">
-									{entry.place}
-								</span>
-								<span className="text-lg font-bold text-white tracking-tight">
-									{entry.team}
-								</span>
+							<div className="flex items-center gap-4">
+								<div
+									className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ring-2 shadow-lg shadow-black/30 ${medals[entry.medal].disc}`}
+								>
+									<Medal className="h-6 w-6" />
+								</div>
+								<div>
+									<p
+										className={`text-[0.7rem] uppercase tracking-[0.25em] font-bold ${medals[entry.medal].label}`}
+									>
+										{entry.place}
+									</p>
+									<p className="text-lg font-bold text-white tracking-tight leading-tight">
+										{entry.team}
+									</p>
+								</div>
 							</div>
 							<ul className="mt-4 flex flex-wrap gap-x-2 gap-y-1 text-sm text-white/60">
 								{entry.members.map((member, i) => (
