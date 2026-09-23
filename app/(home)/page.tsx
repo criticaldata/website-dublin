@@ -3,6 +3,7 @@ import RenderParticles from '@/components/primitives/particles';
 import Hero from './Hero';
 import About from './About';
 import Winner from './Winner';
+import Gallery from './Gallery';
 import Programme from './Programme';
 import Workshop from './Workshop';
 import Audience from './Audience';
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
 	return (
 		<div className="relative bg-black">
-			{/* Fixed particles background — persists while scrolling */}
+			{/* Fixed particles background, persists while scrolling */}
 			<div className="fixed inset-0 z-0 pointer-events-none">
 				<RenderParticles />
 			</div>
@@ -60,6 +61,7 @@ export default function HomePage() {
 			<div className="relative z-10">
 				<Hero />
 				<Winner />
+				<Gallery />
 				<About />
 				<Programme />
 				<Workshop />

@@ -13,6 +13,8 @@ export interface GalleryPhoto {
 	span?: string;
 	/** object-position class for the tile crop, e.g. 'object-[center_70%]' */
 	position?: string;
+	/** Smaller file for the grid tile; the lightbox always opens `src` */
+	thumb?: string;
 }
 
 export default function PhotoGallery({
@@ -50,7 +52,7 @@ export default function PhotoGallery({
 						className={`group relative overflow-hidden rounded-2xl border border-white/10 hover:border-teal-400/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 transition-all duration-300 cursor-zoom-in ${itemClassName ?? 'aspect-[4/3]'} ${photo.span ?? ''}`}
 					>
 						<Image
-							src={photo.src}
+							src={photo.thumb ?? photo.src}
 							alt={photo.alt}
 							fill
 							sizes="(max-width: 1024px) 50vw, 33vw"

@@ -13,6 +13,10 @@ import {
 
 const navItems = [
 	{
+		label: 'Photos',
+		href: '/#gallery',
+	},
+	{
 		label: 'About',
 		href: '/#about',
 	},
@@ -38,7 +42,7 @@ export default function Header({ children }: { children?: React.ReactNode }) {
 	return (
 		<nav className="w-full z-50 sticky bg-black top-0 flex items-center justify-between border-b border-white/10 h-16 px-4">
 			<Logo />
-			{/* Desktop Navigation — hidden (not just transparent) on mobile so it
+			{/* Desktop Navigation: hidden (not just transparent) on mobile so it
 			    neither squeezes the logo nor leaves invisible clickable links */}
 			<div className="hidden flex-1 md:flex md:gap-x-8 justify-center">
 				{navItems.map((item) => (

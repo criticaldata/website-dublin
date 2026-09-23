@@ -1,11 +1,15 @@
 import PhotoGallery from '@/components/elements/PhotoGallery';
 
+// Past MIT Critical Data datathons, kept for the ones that look best
 const photos = [
-	{ src: '/dublin/photos/datathon-2015.jpg', alt: 'MIT Critical Data datathon, 2015' },
-	{ src: '/dublin/photos/group-2017.jpg', alt: 'MIT Critical Data HST.953 group, 2017' },
+	{ src: '/dublin/photos/datathon2.jpeg', alt: 'Datathon participants at MIT' },
 	{
-		src: '/dublin/photos/marrakesh-um6p.jpg',
-		alt: 'Datathon participants at UM6P, Marrakesh',
+		src: '/dublin/photos/datathon1.jpeg',
+		alt: 'Participants at the MakeHealth Colombia datathon',
+	},
+	{
+		src: '/dublin/photos/datathon4.jpeg',
+		alt: 'Datathon cohort gathered under the atrium',
 	},
 	{
 		src: '/dublin/photos/marrakesh-um6p-campus.jpg',
@@ -57,7 +61,7 @@ export default function About() {
 					Large Language Models and generative AI in healthcare.
 				</p>
 
-				{/* Supporting prose — two asymmetric columns */}
+				{/* Supporting prose, two asymmetric columns */}
 				<div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 border-t border-white/10 pt-14">
 					<div className="lg:col-span-7">
 						<p className="text-lg sm:text-xl text-white/70 leading-relaxed tracking-tight">
@@ -83,12 +87,20 @@ export default function About() {
 					</div>
 				</div>
 
-				{/* A global community — click any photo to enlarge */}
-				<PhotoGallery
-					photos={photos}
-					className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
-					itemClassName="aspect-[16/10]"
-				/>
+				{/* Past MIT Critical Data datathons, click any photo to enlarge */}
+				<div className="mt-16">
+					<div className="flex items-center gap-4 mb-5">
+						<div className="h-px w-8 bg-teal-400/40" />
+						<span className="text-[0.65rem] uppercase tracking-[0.3em] text-white/40 font-bold">
+							Past MIT Critical Data datathons
+						</span>
+					</div>
+					<PhotoGallery
+						photos={photos}
+						className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
+						itemClassName="aspect-[16/10]"
+					/>
+				</div>
 
 				{/* Decorative accent */}
 				<div className="mt-20 flex items-center gap-4">

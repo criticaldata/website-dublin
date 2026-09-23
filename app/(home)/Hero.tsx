@@ -3,36 +3,14 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon, ArrowDown } from 'lucide-react';
 import PhotoGallery from '@/components/elements/PhotoGallery';
+import { heroPhotos } from '@/lib/dublink-photos';
 import RenderParticles from '@/components/primitives/particles';
 import { Pigeon } from '@/components/common/logo';
-
-const heroPhotos = [
-	{
-		src: '/dublin/photos/datathon1.jpeg',
-		alt: 'Participants at the MakeHealth Colombia datathon',
-		span: 'sm:col-span-2 sm:row-span-2',
-	},
-	{
-		src: '/dublin/photos/datathon3.jpeg',
-		alt: 'Teams celebrating at a health datathon workshop',
-	},
-	{
-		src: '/dublin/photos/datathon4.jpeg',
-		alt: 'Datathon cohort gathered under the atrium',
-	},
-	{
-		src: '/dublin/photos/datathon2.jpeg',
-		alt: 'Datathon participants at MIT',
-		span: 'sm:col-span-2',
-		// Wide tile: frame the crowd rather than the dome so faces aren't cropped
-		position: 'object-[center_72%]',
-	},
-];
 
 export default function Hero() {
 	return (
 		<div className="relative min-h-screen flex items-center overflow-hidden">
-			{/* Cinematic photo backdrop — Samuel Beckett Bridge at dusk
+			{/* Cinematic photo backdrop: Samuel Beckett Bridge at dusk
 			    (Giuseppe Milo, CC BY 2.0, colour-graded; credit in footer) */}
 			<div aria-hidden className="absolute inset-0">
 				{/* Phones: zoomed out (object-contain, anchored top) so the whole
@@ -47,12 +25,12 @@ export default function Hero() {
 					className="object-contain object-top opacity-90 lg:object-cover lg:object-center lg:opacity-75"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black lg:from-black/50" />
-				{/* Solid scrim behind the text column, desktop only — on phones a
+				{/* Solid scrim behind the text column, desktop only; on phones a
 				    light flat overlay keeps the city visible under the text */}
 				<div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/75 lg:to-transparent" />
 			</div>
 
-			{/* Grain overlay — atmospheric texture */}
+			{/* Grain overlay: atmospheric texture */}
 			<div
 				aria-hidden
 				className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay z-[1]"
@@ -61,7 +39,7 @@ export default function Hero() {
 				}}
 			/>
 
-			{/* Radial glows — Liffey teal & Irish emerald */}
+			{/* Radial glows: Liffey teal & Irish emerald */}
 			<div className="absolute -top-1/4 -right-1/4 h-[80vh] w-[80vh] bg-[radial-gradient(circle_at_center,_rgba(20,184,166,0.15)_0%,_transparent_60%)] pointer-events-none" />
 			<div className="absolute -bottom-1/4 -left-1/4 h-[70vh] w-[70vh] bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.12)_0%,_transparent_60%)] pointer-events-none" />
 
@@ -76,12 +54,12 @@ export default function Hero() {
 				<RenderParticles fullScreen={false} id="tsparticles-hero" />
 			</div>
 
-			{/* Content — on phones/tablets, start below the contained photo band
+			{/* Content: on phones/tablets, start below the contained photo band
 			    (~66vw tall) so the city stays fully visible above the text */}
 			<div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[64vw] pb-24 lg:py-32">
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 					<div className="lg:col-span-8">
-						{/* Kicker — editorial */}
+						{/* Kicker, editorial */}
 						<div className="flex items-center gap-4 mb-10 animate-in fade-in-0 slide-in-from-top-2 duration-700">
 							<div className="h-px w-12 sm:w-20 bg-teal-400/60" />
 							<span className="text-[0.7rem] sm:text-xs uppercase tracking-[0.3em] text-teal-400/90 font-bold">
@@ -169,7 +147,7 @@ export default function Hero() {
 						</div>
 					</div>
 
-					{/* Event logo — sits high in the frame, clear of the photo's
+					{/* Event logo: sits high in the frame, clear of the photo's
 					    bridge/building band lower down */}
 					<div
 						className="hidden lg:flex lg:col-span-4 lg:self-start justify-center pt-4 animate-in fade-in-0 zoom-in-95 duration-1000"
@@ -197,7 +175,7 @@ export default function Hero() {
 					</div>
 				</div>
 
-				{/* The LLM-athon in action — click any photo to enlarge */}
+				{/* DubLINK on the day, click any photo to enlarge */}
 				<div
 					className="mt-16 lg:mt-20 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000"
 					style={{ animationDelay: '900ms', animationFillMode: 'both' }}
@@ -205,7 +183,7 @@ export default function Hero() {
 					<div className="flex items-center gap-4 mb-5">
 						<div className="h-px w-8 bg-teal-400/40" />
 						<span className="text-[0.65rem] uppercase tracking-[0.3em] text-white/40 font-bold">
-							Datathons in action
+							DubLINK on the day
 						</span>
 					</div>
 					<PhotoGallery
