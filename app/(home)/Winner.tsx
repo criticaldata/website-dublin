@@ -34,7 +34,7 @@ const podium = [
 		team: 'Team 2',
 		medal: 'bronze' as const,
 		members: [
-			'P J. Fitzpatrick',
+			'JP Fitzpatrick',
 			'Marina V.',
 			'Cesar Alba Moreno',
 			'Anna Nikitchenko',
