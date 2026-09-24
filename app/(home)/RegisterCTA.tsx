@@ -1,4 +1,3 @@
-import { PRIMARY_CONTACT } from '@/lib/organisers';
 // import { ArrowUpRight } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 
@@ -44,16 +43,7 @@ export default function RegisterCTA() {
 
 				<p className="text-lg sm:text-xl text-white/55 max-w-2xl mx-auto leading-relaxed">
 					Registration&rsquo;s closed for this year. Want to collaborate on the
-					next edition?{' '}
-					<a
-						href={PRIMARY_CONTACT.linkedin}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-teal-300/90 hover:text-teal-200 underline underline-offset-4"
-					>
-						Reach out via LinkedIn
-					</a>
-					.
+					next edition? Reach out via LinkedIn.
 				</p>
 
 				{/* Registration closed, waitlist link removed.
