@@ -14,21 +14,21 @@ type Person = {
 const guests: Person[] = [
 	{
 		name: 'Dr Natalie Cole',
-		photo: null,
+		photo: '/dublin/panel/natalie-cole.jpg',
 		initials: 'NC',
 		role: 'Head of Innovation · Tallaght University Hospital',
 		bio: 'Leads Innovate Health and the development of hospital-based healthcare innovation at Tallaght University Hospital. More than 20 years’ experience across health research and innovation, including roles as Assistant Professor of Neurogenetics at Northwestern Memorial Hospital in Chicago and Change and Benefits Lead in the Office of the CEO of the HSE.',
 	},
 	{
 		name: 'Noeleen McHugh',
-		photo: null,
+		photo: '/dublin/panel/noeleen-mchugh.jpg',
 		initials: 'NM',
 		role: 'Patient & Public Partnership Representative · National Screening Service',
 		bio: 'Member of the National Screening Service AI and Robotic Process Automation Strategic Advisory Committee. Brings extensive experience in governance, innovation and national IT programmes, alongside the patient and public perspective on the safe and trustworthy introduction of AI into national screening services.',
 	},
 	{
 		name: 'Seán Kirwan',
-		photo: null,
+		photo: '/dublin/panel/sean-kirwan.jpg',
 		initials: 'SK',
 		role: 'Co-founder & CEO · MedWrite',
 		bio: 'Digital-health entrepreneur and former pharmaceutical executive. As Global Director of Digital Health Solutions & Strategy at Novartis, he established its Global Digital Design Centre of Excellence. At MedWrite, his work focuses on applying AI and AI-enabled workflows to reduce the administrative burden on healthcare professionals.',
