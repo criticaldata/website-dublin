@@ -29,6 +29,11 @@ export default function Gallery() {
 					className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"
 					itemClassName="aspect-[3/2]"
 				/>
+
+				<p className="mt-8 text-xs sm:text-sm text-white/40">
+					Photo credit: Tamás Tiszai-Szűcs, Ezi Ozoani, Ahmad Albarqawi and
+					Sebastián Cajas.
+				</p>
 			</div>
 		</section>
 	);
