@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { PRIMARY_CONTACT } from '@/lib/organisers';
 
 const partners: {
 	name: string;
@@ -55,7 +54,7 @@ export default function Partners() {
 					international institutions in healthcare, research and AI.
 				</p>
 
-				{/* Logo wall — bold white cards so every mark reads clearly */}
+				{/* Logo wall: bold white cards so every mark reads clearly */}
 				<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 					{partners.map((partner) => (
 						<div
@@ -74,16 +73,7 @@ export default function Partners() {
 				</div>
 
 				<p className="mt-10 text-sm text-white/40">
-					Interested in partnering or sponsoring?{' '}
-					<a
-						href={PRIMARY_CONTACT.linkedin}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-teal-300/90 hover:text-teal-200 font-medium transition-colors"
-					>
-						Message {PRIMARY_CONTACT.name} on LinkedIn
-					</a>
-					.
+					Interested in partnering or sponsoring? Reach out via LinkedIn.
 				</p>
 			</div>
 		</section>
